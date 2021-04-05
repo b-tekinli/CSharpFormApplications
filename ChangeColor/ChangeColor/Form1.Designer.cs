@@ -122,7 +122,7 @@ namespace ChangeColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 420);
+            this.ClientSize = new System.Drawing.Size(521, 449);
             this.Controls.Add(this.btnMixColor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
