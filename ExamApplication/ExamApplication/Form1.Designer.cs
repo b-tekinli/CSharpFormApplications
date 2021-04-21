@@ -100,14 +100,14 @@ namespace ExamApplication
             // 
             // txtBoxSurname
             // 
-            this.txtBoxSurname.Location = new System.Drawing.Point(193, 127);
+            this.txtBoxSurname.Location = new System.Drawing.Point(149, 124);
             this.txtBoxSurname.Name = "txtBoxSurname";
             this.txtBoxSurname.Size = new System.Drawing.Size(125, 27);
             this.txtBoxSurname.TabIndex = 32;
             // 
             // txtBoxName
             // 
-            this.txtBoxName.Location = new System.Drawing.Point(193, 85);
+            this.txtBoxName.Location = new System.Drawing.Point(149, 82);
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(125, 27);
             this.txtBoxName.TabIndex = 31;
@@ -116,7 +116,7 @@ namespace ExamApplication
             // 
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSurname.Location = new System.Drawing.Point(122, 127);
+            this.lblSurname.Location = new System.Drawing.Point(78, 124);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(61, 23);
             this.lblSurname.TabIndex = 30;
@@ -126,7 +126,7 @@ namespace ExamApplication
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(148, 85);
+            this.lblName.Location = new System.Drawing.Point(104, 82);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 23);
             this.lblName.TabIndex = 29;
