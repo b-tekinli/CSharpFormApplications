@@ -19,20 +19,25 @@ namespace PrintNumbersSideBySide
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            int num1 = Convert.ToInt32(txtBoxNum1.Text);    // int tipinde num1 değişkeni tanımlayıp veriyi txtBoxNum1'e text olarak çevirdik.
-            int num2 = Convert.ToInt32(txtBoxNum2.Text);
-            int num3 = Convert.ToInt32(txtBoxNum3.Text);
+            int num1 = Convert.ToInt32(txtBoxNumStart.Text);    // int tipinde num1 değişkeni tanımlayıp veriyi txtBoxNum1'e text olarak çevirdik.
+            int num2 = Convert.ToInt32(txtBoxNumFinish.Text);
+            int num3 = Convert.ToInt32(txtBoxNumIncreaseValue.Text);
 
-            for (int i = num1; i <= num2; i+=num3)          // döngü ile tanımlanan değerden istenen değere kadar sayıları 1 artırmayı sağladık.
+            for (int i = num1; i <= num2; i+=num3)              // döngü ile tanımlanan değerden istenen değere kadar sayıları 1 artırmayı sağladık.
             {
-                if (i == num2)                              // şartımızı belirttik.
+                if (i == num2)                                  // başlangıç değerinin bitiş değerine eşit olma durumunu kontrol ettik.
                 {
-                    txtBoxShow.Text += i.ToString();        // textBox'ın içine döngü içinde tanımladığımız değişkenin metodu olarak stringe çevirip yazdırdık.
+                    txtBoxShow.Text += i.ToString();            // textBox'ın içine döngü içinde tanımladığımız değişkenin metodu ile stringe çevirip yazdırdık.
                 }
                 else
                 {
-                    txtBoxShow.Text += i.ToString() + ", "; // sayılar arasına virgül koyarak yazdırdık.
+                    txtBoxShow.Text += i.ToString() + ", ";     // sayılar arasına virgül koyarak yazdırdık.
                 }
+            }
+
+            if (num2 < num1)                                    // başlangıç değerinin bitiş değerinden daha küçük olma durumunu kontrol ettik.
+            {
+                MessageBox.Show("Başlangıç değeri bitiş değerinden daha küçük olmalıdır.");
             }
         }
     }
