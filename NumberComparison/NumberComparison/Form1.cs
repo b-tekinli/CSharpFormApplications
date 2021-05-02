@@ -39,17 +39,29 @@ namespace NumberComparison
             {
                 MessageBox.Show("Tüm sayılar birbirine eşittir.");
             }
-            else if (num1 == num2)
+            else if (num1 == num2 && num2 < num3)
             {
-                MessageBox.Show(num1.ToString() + " sayısı " + num2.ToString() + " sayısına eşittir.");
+                MessageBox.Show("İlk girdiğiniz sayı ile 2. girdiğiniz sayı eşittir ve son girdiğiniz sayıdan daha küçüktür.");
             }
-            else if (num1 == num3)
+            else if (num1 == num3 && num3 < num2)
             {
-                MessageBox.Show(num1.ToString() + " sayısı " + num3.ToString() + " sayısına eşittir.");
+                MessageBox.Show("İlk girdiğiniz sayı ile son girdiğiniz sayı eşittir ve 2. girdiğiniz sayıdan daha küçüktür.");
             }
-            else if (num2 == num3)
+            else if (num2 == num3 && num3 < num1)
             {
-                MessageBox.Show(num2.ToString() + " sayısı " + num3.ToString() + " sayısına eşittir.");
+                MessageBox.Show("2. girdiğiniz sayı ile son girdiğiniz sayı eşittir ve ilk girdiğiniz sayıdan daha küçüktür.");
+            }
+            else if (num1 == num2 && num2 > num3)
+            {
+                MessageBox.Show("İlk girdiğiniz sayı ile 2. girdiğiniz sayı eşittir ve son girdiğiniz sayıdan daha büyüktür.");
+            }
+            else if (num1 == num3 && num3 > num2)
+            {
+                MessageBox.Show("İlk girdiğiniz sayı ile son girdiğiniz sayı eşittir ve 2. girdiğiniz sayıdan daha büyüktür.");
+            }
+            else if (num2 == num3 && num3 > num1)
+            {
+                MessageBox.Show("2. girdiğiniz sayı ile son girdiğiniz sayı eşittir ve ilk girdiğiniz sayıdan daha büyüktür.");
             }
             else
             {
@@ -79,17 +91,29 @@ namespace NumberComparison
             {
                 MessageBox.Show("Tüm sayılar birbirine eşittir.");
             }
-            else if (num1 == num2)
+            else if (num1 == num2 && num2 < num3)
             {
-                MessageBox.Show(num1.ToString() + " sayısı " + num2.ToString() + " sayısına eşittir.");
+                MessageBox.Show("İlk girdiğiniz sayı ile 2. girdiğiniz sayı eşittir ve son girdiğiniz sayıdan daha küçüktür.");
             }
-            else if (num1 == num3)
+            else if (num1 == num3 && num3 < num2)
             {
-                MessageBox.Show(num1.ToString() + " sayısı " + num3.ToString() + " sayısına eşittir.");
+                MessageBox.Show("İlk girdiğiniz sayı ile son girdiğiniz sayı eşittir ve 2. girdiğiniz sayıdan daha küçüktür.");
             }
-            else if (num2 == num3)
+            else if (num2 == num3 && num3 < num1)
             {
-                MessageBox.Show(num2.ToString() + " sayısı " + num3.ToString() + " sayısına eşittir.");
+                MessageBox.Show("2. girdiğiniz sayı ile son girdiğiniz sayı eşittir ve ilk girdiğiniz sayıdan daha küçüktür.");
+            }
+            else if (num1 == num2 && num2 > num3)
+            {
+                MessageBox.Show("İlk girdiğiniz sayı ile 2. girdiğiniz sayı eşittir ve son girdiğiniz sayıdan daha büyüktür.");
+            }
+            else if (num1 == num3 && num3 > num2)
+            {
+                MessageBox.Show("İlk girdiğiniz sayı ile son girdiğiniz sayı eşittir ve 2. girdiğiniz sayıdan daha büyüktür.");
+            }
+            else if (num2 == num3 && num3 > num1)
+            {
+                MessageBox.Show("2. girdiğiniz sayı ile son girdiğiniz sayı eşittir ve ilk girdiğiniz sayıdan daha büyüktür.");
             }
             else
             {
