@@ -29,7 +29,7 @@ namespace RandomNumberWithoutRepetition
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstBoxRandomSmall = new System.Windows.Forms.ListBox();
+            this.lstBoxRandom = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,17 +37,18 @@ namespace RandomNumberWithoutRepetition
             this.txtBoxFinish = new System.Windows.Forms.TextBox();
             this.txtBoxStart = new System.Windows.Forms.TextBox();
             this.txtBoxNumberOfProduction = new System.Windows.Forms.TextBox();
-            this.lstBoxRandomBig = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBoxBlockNum = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lstBoxRandomSmall
+            // lstBoxRandom
             // 
-            this.lstBoxRandomSmall.FormattingEnabled = true;
-            this.lstBoxRandomSmall.ItemHeight = 20;
-            this.lstBoxRandomSmall.Location = new System.Drawing.Point(365, 17);
-            this.lstBoxRandomSmall.Name = "lstBoxRandomSmall";
-            this.lstBoxRandomSmall.Size = new System.Drawing.Size(150, 284);
-            this.lstBoxRandomSmall.TabIndex = 15;
+            this.lstBoxRandom.FormattingEnabled = true;
+            this.lstBoxRandom.ItemHeight = 20;
+            this.lstBoxRandom.Location = new System.Drawing.Point(365, 17);
+            this.lstBoxRandom.Name = "lstBoxRandom";
+            this.lstBoxRandom.Size = new System.Drawing.Size(150, 284);
+            this.lstBoxRandom.TabIndex = 15;
             // 
             // label3
             // 
@@ -84,7 +85,7 @@ namespace RandomNumberWithoutRepetition
             this.btnRandom.BackColor = System.Drawing.Color.White;
             this.btnRandom.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnRandom.ForeColor = System.Drawing.Color.Red;
-            this.btnRandom.Location = new System.Drawing.Point(82, 224);
+            this.btnRandom.Location = new System.Drawing.Point(82, 289);
             this.btnRandom.Name = "btnRandom";
             this.btnRandom.Size = new System.Drawing.Size(216, 62);
             this.btnRandom.TabIndex = 11;
@@ -108,34 +109,43 @@ namespace RandomNumberWithoutRepetition
             // 
             // txtBoxNumberOfProduction
             // 
-            this.txtBoxNumberOfProduction.Location = new System.Drawing.Point(262, 157);
+            this.txtBoxNumberOfProduction.Location = new System.Drawing.Point(262, 153);
             this.txtBoxNumberOfProduction.Name = "txtBoxNumberOfProduction";
             this.txtBoxNumberOfProduction.Size = new System.Drawing.Size(67, 27);
             this.txtBoxNumberOfProduction.TabIndex = 8;
             // 
-            // lstBoxRandomBig
+            // label4
             // 
-            this.lstBoxRandomBig.FormattingEnabled = true;
-            this.lstBoxRandomBig.ItemHeight = 20;
-            this.lstBoxRandomBig.Location = new System.Drawing.Point(555, 17);
-            this.lstBoxRandomBig.Name = "lstBoxRandomBig";
-            this.lstBoxRandomBig.Size = new System.Drawing.Size(150, 284);
-            this.lstBoxRandomBig.TabIndex = 16;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(22, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(223, 23);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "İstemediğiniz sayıları giriniz:";
+            // 
+            // txtBoxBlockNum
+            // 
+            this.txtBoxBlockNum.Location = new System.Drawing.Point(262, 218);
+            this.txtBoxBlockNum.Name = "txtBoxBlockNum";
+            this.txtBoxBlockNum.Size = new System.Drawing.Size(67, 27);
+            this.txtBoxBlockNum.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
-            this.ClientSize = new System.Drawing.Size(715, 314);
-            this.Controls.Add(this.lstBoxRandomBig);
-            this.Controls.Add(this.lstBoxRandomSmall);
+            this.ClientSize = new System.Drawing.Size(533, 365);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lstBoxRandom);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.txtBoxFinish);
             this.Controls.Add(this.txtBoxStart);
+            this.Controls.Add(this.txtBoxBlockNum);
             this.Controls.Add(this.txtBoxNumberOfProduction);
             this.Name = "Form1";
             this.Text = "Tekrarsız Sayı Üretme";
@@ -146,7 +156,7 @@ namespace RandomNumberWithoutRepetition
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstBoxRandomSmall;
+        private System.Windows.Forms.ListBox lstBoxRandom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -154,7 +164,8 @@ namespace RandomNumberWithoutRepetition
         private System.Windows.Forms.TextBox txtBoxFinish;
         private System.Windows.Forms.TextBox txtBoxStart;
         private System.Windows.Forms.TextBox txtBoxNumberOfProduction;
-        private System.Windows.Forms.ListBox lstBoxRandomBig;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBoxBlockNum;
     }
 }
 
