@@ -47,7 +47,7 @@ namespace RandomNumberWithoutRepetition
             this.lstBoxRandom.ItemHeight = 20;
             this.lstBoxRandom.Location = new System.Drawing.Point(365, 17);
             this.lstBoxRandom.Name = "lstBoxRandom";
-            this.lstBoxRandom.Size = new System.Drawing.Size(150, 284);
+            this.lstBoxRandom.Size = new System.Drawing.Size(150, 224);
             this.lstBoxRandom.TabIndex = 15;
             // 
             // label3
@@ -85,9 +85,9 @@ namespace RandomNumberWithoutRepetition
             this.btnRandom.BackColor = System.Drawing.Color.White;
             this.btnRandom.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnRandom.ForeColor = System.Drawing.Color.Red;
-            this.btnRandom.Location = new System.Drawing.Point(82, 289);
+            this.btnRandom.Location = new System.Drawing.Point(140, 278);
             this.btnRandom.Name = "btnRandom";
-            this.btnRandom.Size = new System.Drawing.Size(216, 62);
+            this.btnRandom.Size = new System.Drawing.Size(210, 62);
             this.btnRandom.TabIndex = 11;
             this.btnRandom.Text = "RASTGELE SAYI ÜRET";
             this.btnRandom.UseVisualStyleBackColor = false;
