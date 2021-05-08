@@ -29,7 +29,7 @@ namespace RandomNumberWithoutRepetition
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstBoxRandom = new System.Windows.Forms.ListBox();
+            this.lstBoxRan = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,14 +41,14 @@ namespace RandomNumberWithoutRepetition
             this.txtBoxBlockNum = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lstBoxRandom
+            // lstBoxRan
             // 
-            this.lstBoxRandom.FormattingEnabled = true;
-            this.lstBoxRandom.ItemHeight = 20;
-            this.lstBoxRandom.Location = new System.Drawing.Point(365, 17);
-            this.lstBoxRandom.Name = "lstBoxRandom";
-            this.lstBoxRandom.Size = new System.Drawing.Size(150, 224);
-            this.lstBoxRandom.TabIndex = 15;
+            this.lstBoxRan.FormattingEnabled = true;
+            this.lstBoxRan.ItemHeight = 20;
+            this.lstBoxRan.Location = new System.Drawing.Point(365, 17);
+            this.lstBoxRan.Name = "lstBoxRan";
+            this.lstBoxRan.Size = new System.Drawing.Size(150, 224);
+            this.lstBoxRan.TabIndex = 15;
             // 
             // label3
             // 
@@ -83,11 +83,11 @@ namespace RandomNumberWithoutRepetition
             // btnRandom
             // 
             this.btnRandom.BackColor = System.Drawing.Color.White;
-            this.btnRandom.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnRandom.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnRandom.ForeColor = System.Drawing.Color.Red;
-            this.btnRandom.Location = new System.Drawing.Point(140, 278);
+            this.btnRandom.Location = new System.Drawing.Point(143, 270);
             this.btnRandom.Name = "btnRandom";
-            this.btnRandom.Size = new System.Drawing.Size(210, 62);
+            this.btnRandom.Size = new System.Drawing.Size(223, 62);
             this.btnRandom.TabIndex = 11;
             this.btnRandom.Text = "RASTGELE SAYI ÜRET";
             this.btnRandom.UseVisualStyleBackColor = false;
@@ -118,34 +118,34 @@ namespace RandomNumberWithoutRepetition
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(22, 222);
+            this.label4.Location = new System.Drawing.Point(21, 218);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 23);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "İstemediğiniz sayıları giriniz:";
+            this.label4.Size = new System.Drawing.Size(213, 23);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "İstemediğiniz sayıyı giriniz:";
             // 
             // txtBoxBlockNum
             // 
-            this.txtBoxBlockNum.Location = new System.Drawing.Point(262, 218);
+            this.txtBoxBlockNum.Location = new System.Drawing.Point(262, 214);
             this.txtBoxBlockNum.Name = "txtBoxBlockNum";
             this.txtBoxBlockNum.Size = new System.Drawing.Size(67, 27);
-            this.txtBoxBlockNum.TabIndex = 8;
+            this.txtBoxBlockNum.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
-            this.ClientSize = new System.Drawing.Size(533, 365);
+            this.ClientSize = new System.Drawing.Size(525, 346);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lstBoxRandom);
+            this.Controls.Add(this.txtBoxBlockNum);
+            this.Controls.Add(this.lstBoxRan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.txtBoxFinish);
             this.Controls.Add(this.txtBoxStart);
-            this.Controls.Add(this.txtBoxBlockNum);
             this.Controls.Add(this.txtBoxNumberOfProduction);
             this.Name = "Form1";
             this.Text = "Tekrarsız Sayı Üretme";
@@ -156,7 +156,7 @@ namespace RandomNumberWithoutRepetition
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstBoxRandom;
+        private System.Windows.Forms.ListBox lstBoxRan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

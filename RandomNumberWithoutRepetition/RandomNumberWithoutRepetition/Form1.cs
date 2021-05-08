@@ -20,44 +20,46 @@ namespace RandomNumberWithoutRepetition
 
         private void btnRandom_Click(object sender, EventArgs e)
         {
-            ArrayList arrayList = new ArrayList();                  // ArrayList class'ından nesne oluşturduk.
-            Random random = new Random();                           // Random class'ından yeni nesne oluşturduk.
-
-            int numberOfProduction = Convert.ToInt32(txtBoxNumberOfProduction.Text);
-            int start = Convert.ToInt32(txtBoxStart.Text);          // değişken tanımlayıp int tipine çevirdik ve ilgili textBox'ın içine text olarak atadık.
+            int start = Convert.ToInt32(txtBoxStart.Text);
             int finish = Convert.ToInt32(txtBoxFinish.Text);
+            int blockNum = Convert.ToInt32(txtBoxBlockNum.Text);
 
 
-            while (true)
+            int[] arrayList = new int[blockNum];
+            Random random = new Random();
+            
+
+            lstBoxRan.Items.Clear();
+
+
+            for (int i = 0; i < arrayList.Length; i++)
             {
-                numberOfProduction--;                               // üretilecek sayı adedini 1 azalttık.
-                int number = random.Next(start, finish);            // start ve finish değerleri arasında random sayı üretimi yaptık.
+                int numbers = random.Next(start, finish);
+                int counter = 0;
 
-
-                if (arrayList.IndexOf(number) != -1)                 // liste içinde sayıların indeks numarasını metot yardımıyla aratıp bulamaması sonucunda 0 döndürme şartını belirttik.
+                if (i == 0)
                 {
-                    continue;                                       // döngüye baştan başlasın diye continue deyimi ekledik.
+                    arrayList[i] = numbers;
                 }
                 else
                 {
-                    arrayList.Add(number);                          // liste için ürettiğimiz nesnenin içine sayıları ekliyoruz.
-                    lstBoxRandom.Items.Add(number.ToString());      // random gelen sayıları listBox'ın içine item olarak ekliyoruz.
-                }
+                    foreach (var item in lstBoxRan.Items)
+                    {
+                        int result = String.Compare(item.ToString(), numbers.ToString());
 
-                if (numberOfProduction == 0)                        // üretilen sayı adedinin 0 olma durumunu kontrol ettik.
-                {
-                    break;                                          // şart sağlandığında döngüden çıkmasını sağladık.
-                }
-            }
-
-
-            foreach (Control item in this.Controls)
-            {
-                if (item is TextBox)
-                {
-                    TextBox txtBox = item as TextBox;
-                    txtBox.Clear();
-                    lstBoxRandom.Items.Clear();
+                        if (result == 0)
+                        {
+                            counter = -1;
+                        }
+                    }
+                    if (counter == 0 && numbers != blockNum)
+                    {
+                        lstBoxRan.Items.Add(numbers.ToString());
+                    }
+                    else
+                    {
+                        i -= 1;
+                    }
                 }
             }
         }
