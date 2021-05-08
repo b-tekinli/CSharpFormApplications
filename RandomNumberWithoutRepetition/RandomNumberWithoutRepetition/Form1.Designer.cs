@@ -109,7 +109,7 @@ namespace RandomNumberWithoutRepetition
             // 
             // txtBoxNumberOfProduction
             // 
-            this.txtBoxNumberOfProduction.Location = new System.Drawing.Point(262, 153);
+            this.txtBoxNumberOfProduction.Location = new System.Drawing.Point(262, 214);
             this.txtBoxNumberOfProduction.Name = "txtBoxNumberOfProduction";
             this.txtBoxNumberOfProduction.Size = new System.Drawing.Size(67, 27);
             this.txtBoxNumberOfProduction.TabIndex = 8;
@@ -126,7 +126,7 @@ namespace RandomNumberWithoutRepetition
             // 
             // txtBoxBlockNum
             // 
-            this.txtBoxBlockNum.Location = new System.Drawing.Point(262, 214);
+            this.txtBoxBlockNum.Location = new System.Drawing.Point(262, 156);
             this.txtBoxBlockNum.Name = "txtBoxBlockNum";
             this.txtBoxBlockNum.Size = new System.Drawing.Size(67, 27);
             this.txtBoxBlockNum.TabIndex = 16;
