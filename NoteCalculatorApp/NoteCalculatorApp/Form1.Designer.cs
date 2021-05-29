@@ -107,7 +107,7 @@ namespace NoteCalculatorApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 498);
+            this.ClientSize = new System.Drawing.Size(458, 249);
             this.Controls.Add(this.lblOrtSonuc);
             this.Controls.Add(this.txtNot1);
             this.Controls.Add(this.txtNot2);
@@ -117,7 +117,7 @@ namespace NoteCalculatorApp
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Average Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
