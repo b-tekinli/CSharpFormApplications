@@ -150,7 +150,7 @@ namespace NewWordApp
             this.Controls.Add(this.lblAdd);
             this.Controls.Add(this.txtBoxAdd);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Yeni Kelime";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
