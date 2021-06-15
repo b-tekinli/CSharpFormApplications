@@ -22,13 +22,14 @@ namespace SnakeGame
             snakeParts[2] = new SnakeParts(170, 150);
         }
 
+        // yılanın ilerlemesi ayarlandı.
         public void Go(Direction direction)
         {
             direction1 = direction;
 
             if (direction._x == 0 && direction._y == 0)
             {
-
+            
             }
 
             else
@@ -41,9 +42,10 @@ namespace SnakeGame
             }
         }
 
+        // yem yediğinde boyutu büyümesi için fonksiyon yazıldı.
         public void Grow()
         {
-            Array.Resize(ref snakeParts, snakeParts.Length + 1);    // Yılanın boyutu artrıldı.
+            Array.Resize(ref snakeParts, snakeParts.Length + 1);    // yılanın boyutu artırıldı.
             snakeParts[snakeParts.Length - 1] = new SnakeParts(snakeParts[snakeParts.Length - 2].x_ - direction1._x, snakeParts[snakeParts.Length - 2].y_ - direction1._y);
             snakeSize++;
         }

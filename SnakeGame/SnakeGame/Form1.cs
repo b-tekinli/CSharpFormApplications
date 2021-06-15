@@ -27,7 +27,7 @@ namespace SnakeGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            NewGame();
+            timer1.Stop();
         }
 
         private void NewGame()
@@ -43,16 +43,58 @@ namespace SnakeGame
                 Array.Resize(ref pbSnakeParts, pbSnakeParts.Length + 1);
                 pbSnakeParts[i] = pbAdd();
             }
-            timer1.Start();
             btnRestart.Enabled = false;
+            timer1.Start();
+            cboChangeColor.Enabled = false;
+            btnStart.Enabled = false;
         }
 
         private PictureBox pbAdd()
         {
             PictureBox pictureBox = new PictureBox();
 
+            if (cboChangeColor.Text == "Kırmızı")                       // combobox seçimine göre renkler belirtildi.
+            {
+                pictureBox.BackColor = Color.Red;
+            }
+            else if (cboChangeColor.Text == "Sarı")
+            {
+                pictureBox.BackColor = Color.Yellow;
+            }
+            else if (cboChangeColor.Text == "AçıkYeşil")
+            {
+                pictureBox.BackColor = Color.Lime;
+            }
+            else if (cboChangeColor.Text == "Turuncu")
+            {
+                pictureBox.BackColor = Color.Orange;
+            }
+            else if (cboChangeColor.Text == "Mor")
+            {
+                pictureBox.BackColor = Color.Purple;
+            }
+            else if (cboChangeColor.Text == "AçıkMavi")
+            {
+                pictureBox.BackColor = Color.Cyan;
+            }
+            else if (cboChangeColor.Text == "KoyuYeşil")
+            {
+                pictureBox.BackColor = Color.DarkGreen;
+            }
+            else if (cboChangeColor.Text == "KoyuMavi")
+            {
+                pictureBox.BackColor = Color.Blue;
+            }
+            else if (cboChangeColor.Text == "Pembe")
+            {
+                pictureBox.BackColor = Color.Pink;
+            }
+            else
+            {
+                pictureBox.BackColor = Color.White;
+            }
+
             pictureBox.Size = new Size(10, 10);
-            pictureBox.BackColor = Color.White;
             pictureBox.Location = snake.GetPos(pbSnakeParts.Length - 1);
             panel1.Controls.Add(pictureBox);
             return pictureBox;
@@ -69,9 +111,9 @@ namespace SnakeGame
         // Yön tuşları ayarlandı.
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)       // yukarı ok tuşu ve W tuşuna basıldığında yukarı hareket etme ayarlandı.
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)                // yukarı ok tuşu ve W tuşuna basıldığında yukarı hareket etme ayarlandı.
             {
-                if (direction1._y != 10)                           // yılanın kendiliğinden terse dönme durumu kontrol edildi.
+                if (direction1._y != 10)                                    // yılanın kendiliğinden terse dönme durumu kontrol edildi.
                 {
                     direction1 = new Direction(0, -10);
                 }
@@ -104,9 +146,9 @@ namespace SnakeGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblScore.Text = "Skor: " + score.ToString();
-            snake.Go(direction1);
-            pbUpdate();
+            lblScore.Text = "Skor: " + score.ToString();                    // skor ekrana yazdırıldı.
+            snake.Go(direction1);                                           // yılanın ilerlemesi için yön belirtildi.
+            pbUpdate();                                                     // fonksiyonlar çağırıldı.
             createFood();
             DidEatFood();
             HitItself();
@@ -118,7 +160,7 @@ namespace SnakeGame
             if (!anyFood)
             {
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.BackColor = Color.Red;
+                pictureBox.BackColor = Color.Red;                           // yem rengi kırmızı olarak ayarlandı.
                 pictureBox.Size = new Size(10, 10);
                 pictureBox.Location = new Point(random.Next(panel1.Width / 10) * 10, random.Next(panel1.Height / 10) * 10);
                 pbFood = pictureBox;
@@ -131,8 +173,8 @@ namespace SnakeGame
         {
             if (snake.GetPos(0) == pbFood.Location)
             {
-                score += 10;                                        // her yem yendiğinde skor 10 artırıldı.
-                snake.Grow();                                       // yılan yeni yediğinde büyütüldü.
+                score += 10;                                                // her yem yendiğinde skor 10 artırıldı.
+                snake.Grow();                                               // yılan yemi yediğinde büyütüldü.
                 Array.Resize(ref pbSnakeParts, pbSnakeParts.Length + 1);
                 pbSnakeParts[pbSnakeParts.Length - 1] = pbAdd();
                 anyFood = false;
@@ -166,11 +208,17 @@ namespace SnakeGame
             timer1.Stop();
             MessageBox.Show("Game Over!");
             btnRestart.Enabled = true;
+            cboChangeColor.Enabled = true;
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
+            NewGame();
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
             NewGame();
         }
     }
