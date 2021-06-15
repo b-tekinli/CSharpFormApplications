@@ -47,9 +47,18 @@ namespace SnakeGame
             snakeParts[snakeParts.Length - 1] = new SnakeParts(snakeParts[snakeParts.Length - 2].x_ - direction1._x, snakeParts[snakeParts.Length - 2].y_ - direction1._y);
             snakeSize++;
         }
+
         public Point GetPos(int number)
         {
             return new Point(snakeParts[number].x_, snakeParts[number].y_);
+        }
+
+        public int SnakeSize
+        {
+            get
+            {
+                return snakeSize;
+            }
         }
     }
 
