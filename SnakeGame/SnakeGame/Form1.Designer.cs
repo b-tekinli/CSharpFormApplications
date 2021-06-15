@@ -63,10 +63,10 @@ namespace SnakeGame
             // lblScore
             // 
             this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblScore.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblScore.Location = new System.Drawing.Point(693, 197);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(59, 20);
+            this.lblScore.Size = new System.Drawing.Size(65, 21);
             this.lblScore.TabIndex = 4;
             this.lblScore.Text = "Skor:";
             // 

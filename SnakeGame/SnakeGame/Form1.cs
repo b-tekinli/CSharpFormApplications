@@ -17,7 +17,7 @@ namespace SnakeGame
             InitializeComponent();
         }
 
-        Snake snake = new Snake();
+        Snake snake;
         Direction direction1;
         PictureBox[] pbSnakeParts;
         bool anyFood = false;
@@ -32,11 +32,13 @@ namespace SnakeGame
 
         private void NewGame()
         {
+            anyFood = false;
+            score = 0;
             snake = new Snake();
             direction1 = new Direction(-10, 0);
             pbSnakeParts = new PictureBox[0];
 
-            for (int i = 0; i < 3; i++)                                 // yılanın parçalarının uzunluğu 3 olduğu için.
+            for (int i = 0; i < 3; i++)                                     // yılanın parçalarının uzunluğu 3 olduğu için.
             {
                 Array.Resize(ref pbSnakeParts, pbSnakeParts.Length + 1);
                 pbSnakeParts[i] = pbAdd();
@@ -73,34 +75,30 @@ namespace SnakeGame
                 {
                     direction1 = new Direction(0, -10);
                 }
-                direction1 = new Direction(0, -10);
             }
 
             else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
                 if (direction1._y != -10)
                 {
-                    direction1 = new Direction(0, -10);
+                    direction1 = new Direction(0, 10);
                 }
-                direction1 = new Direction(0, 10);
             }
 
             else if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
             {
                 if (direction1._x != 10)
                 {
-                    direction1 = new Direction(0, -10);
+                    direction1 = new Direction(-10, 0);
                 }
-                direction1 = new Direction(-10, 0);
             }
 
             else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
             {
                 if (direction1._x != -10)
                 {
-                    direction1 = new Direction(0, -10);
+                    direction1 = new Direction(10, 0);
                 }
-                direction1 = new Direction(10, 0);
             }
         }
 
@@ -133,8 +131,8 @@ namespace SnakeGame
         {
             if (snake.GetPos(0) == pbFood.Location)
             {
-                score += 10;                                  // her yem yendiğinde skor 10 artırıldı.
-                snake.Grow();                                 // yılan yeni yediğinde büyütüldü.
+                score += 10;                                        // her yem yendiğinde skor 10 artırıldı.
+                snake.Grow();                                       // yılan yeni yediğinde büyütüldü.
                 Array.Resize(ref pbSnakeParts, pbSnakeParts.Length + 1);
                 pbSnakeParts[pbSnakeParts.Length - 1] = pbAdd();
                 anyFood = false;
