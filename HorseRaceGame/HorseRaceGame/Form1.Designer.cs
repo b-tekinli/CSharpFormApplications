@@ -189,7 +189,7 @@ namespace HorseRaceGame
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(146, 60);
             this.btnRestart.TabIndex = 13;
-            this.btnRestart.Text = "RESTART";
+            this.btnRestart.Text = "RESET";
             this.btnRestart.UseVisualStyleBackColor = false;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
