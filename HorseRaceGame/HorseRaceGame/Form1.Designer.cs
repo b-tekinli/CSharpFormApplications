@@ -131,9 +131,9 @@ namespace HorseRaceGame
             // 
             // btnStart
             // 
-            this.btnStart.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnStart.BackColor = System.Drawing.Color.ForestGreen;
             this.btnStart.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnStart.ForeColor = System.Drawing.Color.Pink;
+            this.btnStart.ForeColor = System.Drawing.Color.White;
             this.btnStart.Location = new System.Drawing.Point(12, 527);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(146, 60);
@@ -147,7 +147,7 @@ namespace HorseRaceGame
             this.lblRaceStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRaceStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRaceStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRaceStatus.ForeColor = System.Drawing.Color.Plum;
+            this.lblRaceStatus.ForeColor = System.Drawing.Color.Cyan;
             this.lblRaceStatus.Location = new System.Drawing.Point(239, 588);
             this.lblRaceStatus.Name = "lblRaceStatus";
             this.lblRaceStatus.Size = new System.Drawing.Size(703, 75);
@@ -159,7 +159,7 @@ namespace HorseRaceGame
             // 
             this.lblMetre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblMetre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMetre.ForeColor = System.Drawing.Color.Plum;
+            this.lblMetre.ForeColor = System.Drawing.Color.Cyan;
             this.lblMetre.Location = new System.Drawing.Point(551, 518);
             this.lblMetre.Name = "lblMetre";
             this.lblMetre.Size = new System.Drawing.Size(141, 70);
@@ -172,7 +172,7 @@ namespace HorseRaceGame
             this.lblRaceResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRaceResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRaceResult.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRaceResult.ForeColor = System.Drawing.Color.Plum;
+            this.lblRaceResult.ForeColor = System.Drawing.Color.Cyan;
             this.lblRaceResult.Location = new System.Drawing.Point(973, 518);
             this.lblRaceResult.Name = "lblRaceResult";
             this.lblRaceResult.Size = new System.Drawing.Size(288, 145);
@@ -182,9 +182,9 @@ namespace HorseRaceGame
             // 
             // btnRestart
             // 
-            this.btnRestart.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRestart.BackColor = System.Drawing.Color.ForestGreen;
             this.btnRestart.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRestart.ForeColor = System.Drawing.Color.Pink;
+            this.btnRestart.ForeColor = System.Drawing.Color.White;
             this.btnRestart.Location = new System.Drawing.Point(12, 593);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(146, 60);
@@ -201,7 +201,7 @@ namespace HorseRaceGame
             // 
             this.lblCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCounter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCounter.ForeColor = System.Drawing.Color.Plum;
+            this.lblCounter.ForeColor = System.Drawing.Color.Cyan;
             this.lblCounter.Location = new System.Drawing.Point(488, 518);
             this.lblCounter.Name = "lblCounter";
             this.lblCounter.Size = new System.Drawing.Size(66, 70);

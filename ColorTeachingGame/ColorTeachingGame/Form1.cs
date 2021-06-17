@@ -20,52 +20,77 @@ namespace ColorTeachingGame
         private void Form1_Load(object sender, EventArgs e)
         {
             SelectColor();
+            timer1.Enabled = true;
         }
 
         public void SelectColor()
         {
-            Random random = new Random();
-            int number = random.Next(0, 5);
+            Random r = new Random();
 
-            if (number == 0)
+            int[] colors = new int[9];
+
+            int random;
+
+            for (int i = 0; i < colors.Length; i++)
             {
-                lblColor.Text = "RED";
-            }
-            else if (number == 1)
-            {
-                lblColor.Text = "WHITE";
-            }
-            else if (number == 2)
-            {
-                lblColor.Text = "GREEN";
-            }
-            else if (number == 3)
-            {
-                lblColor.Text = "PURPLE";
-            }
-            else if (number == 4)
-            {
-                lblColor.Text = "GRAY";
-            }
-            else if (number == 5)
-            {
-                lblColor.Text = "YELLOW";
-            }
-            else if (number == 6)
-            {
-                lblColor.Text = "BLACK";
-            }
-            else if (number == 7)
-            {
-                lblColor.Text = "ORANGE";
-            }
-            else if (number == 8)
-            {
-                lblColor.Text = "PINK";
-            }
-            else if (number == 9)
-            {
-                lblColor.Text = "BLUE";
+                bool isTrue = true;
+
+                random = r.Next(0, 10);
+
+                foreach (var x in colors)
+                {
+                    if (x == random)
+                    {
+                        i--;
+                        isTrue = false;
+                        break;
+                    }
+                }
+
+                if (isTrue)
+                {
+                    colors[i] = random;
+                }
+                else if (random == 0)
+                {
+                    lblColor.Text = "RED";
+                }
+                else if (random == 1)
+                {
+                    lblColor.Text = "WHITE";
+                }
+                else if (random == 2)
+                {
+                    lblColor.Text = "GREEN";
+                }
+                else if (random == 3)
+                {
+                    lblColor.Text = "PURPLE";
+                }
+                else if (random == 4)
+                {
+                    lblColor.Text = "GRAY";
+                }
+                else if (random == 5)
+                {
+                    lblColor.Text = "YELLOW";
+                }
+                else if (random == 6)
+                {
+                    lblColor.Text = "BLACK";
+                }
+                else if (random == 7)
+                {
+                    lblColor.Text = "ORANGE";
+                }
+                else if (random == 8)
+                {
+                    lblColor.Text = "PINK";
+                }
+                else if (random == 9)
+                {
+                    lblColor.Text = "BLUE";
+                }
             }
         }
 
@@ -99,6 +124,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -112,6 +138,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -125,6 +152,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -138,6 +166,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -151,6 +180,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -164,6 +194,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -177,6 +208,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -190,6 +222,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -203,6 +236,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }
@@ -216,6 +250,7 @@ namespace ColorTeachingGame
             }
             else
             {
+                lblScoreCounter.Text = (Convert.ToInt16(lblScoreCounter.Text) - 1).ToString();
                 SelectColor();
             }
         }

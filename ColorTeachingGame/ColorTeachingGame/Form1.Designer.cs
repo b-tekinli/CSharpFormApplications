@@ -74,7 +74,7 @@ namespace ColorTeachingGame
             this.lblCounter.BackColor = System.Drawing.Color.Transparent;
             this.lblCounter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCounter.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCounter.Location = new System.Drawing.Point(306, 5);
+            this.lblCounter.Location = new System.Drawing.Point(308, 5);
             this.lblCounter.Name = "lblCounter";
             this.lblCounter.Size = new System.Drawing.Size(42, 26);
             this.lblCounter.TabIndex = 8;
@@ -103,7 +103,7 @@ namespace ColorTeachingGame
             // 
             this.lblColor.AutoSize = true;
             this.lblColor.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblColor.Location = new System.Drawing.Point(291, 102);
+            this.lblColor.Location = new System.Drawing.Point(287, 122);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(81, 39);
             this.lblColor.TabIndex = 11;
