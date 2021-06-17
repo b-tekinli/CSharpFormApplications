@@ -23,7 +23,8 @@ namespace HorseRaceGame
         // başlat butonu ayarlandı.
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true;                                         // oyunun başlaması için süre aktif edildi.
+            // oyunun başlaması için süre aktif edildi.
+            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
