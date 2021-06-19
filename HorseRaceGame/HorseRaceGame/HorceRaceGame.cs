@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -275,6 +276,15 @@ namespace HorseRaceGame
         }
 
 
+        // ekle butonu ayarlandı.
+        private void btnAddName_Click(object sender, EventArgs e)
+        {
+            // textbox'tan veri olarak aldığımız verileri label'lara yazdırdık.
+            lblHorseName1.Text = txtBoxHorseName1.Text.ToUpper();
+            lblHorseName2.Text = txtBoxHorseName2.Text.ToUpper();
+            lblHorseName3.Text = txtBoxHorseName3.Text.ToUpper();
+            lblHorseName4.Text = txtBoxHorseName4.Text.ToUpper();
+        }
     }
 }
 
