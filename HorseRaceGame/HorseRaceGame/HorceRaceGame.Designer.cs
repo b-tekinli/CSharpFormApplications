@@ -157,10 +157,10 @@ namespace HorseRaceGame
             // 
             // lblRaceStatus
             // 
-            this.lblRaceStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRaceStatus.BackColor = System.Drawing.Color.DarkRed;
             this.lblRaceStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRaceStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRaceStatus.ForeColor = System.Drawing.Color.Cyan;
+            this.lblRaceStatus.ForeColor = System.Drawing.Color.White;
             this.lblRaceStatus.Location = new System.Drawing.Point(246, 643);
             this.lblRaceStatus.Name = "lblRaceStatus";
             this.lblRaceStatus.Size = new System.Drawing.Size(703, 75);
@@ -170,9 +170,9 @@ namespace HorseRaceGame
             // 
             // lblMetre
             // 
-            this.lblMetre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblMetre.BackColor = System.Drawing.Color.DarkRed;
             this.lblMetre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMetre.ForeColor = System.Drawing.Color.Cyan;
+            this.lblMetre.ForeColor = System.Drawing.Color.White;
             this.lblMetre.Location = new System.Drawing.Point(558, 573);
             this.lblMetre.Name = "lblMetre";
             this.lblMetre.Size = new System.Drawing.Size(141, 70);
@@ -182,10 +182,10 @@ namespace HorseRaceGame
             // 
             // lblRaceResult
             // 
-            this.lblRaceResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRaceResult.BackColor = System.Drawing.Color.DarkRed;
             this.lblRaceResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRaceResult.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRaceResult.ForeColor = System.Drawing.Color.Cyan;
+            this.lblRaceResult.ForeColor = System.Drawing.Color.White;
             this.lblRaceResult.Location = new System.Drawing.Point(955, 575);
             this.lblRaceResult.Name = "lblRaceResult";
             this.lblRaceResult.Size = new System.Drawing.Size(288, 145);
@@ -208,9 +208,9 @@ namespace HorseRaceGame
             // 
             // lblCounter
             // 
-            this.lblCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCounter.BackColor = System.Drawing.Color.DarkRed;
             this.lblCounter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCounter.ForeColor = System.Drawing.Color.Cyan;
+            this.lblCounter.ForeColor = System.Drawing.Color.White;
             this.lblCounter.Location = new System.Drawing.Point(495, 573);
             this.lblCounter.Name = "lblCounter";
             this.lblCounter.Size = new System.Drawing.Size(66, 70);
@@ -244,7 +244,7 @@ namespace HorseRaceGame
             // 
             // txtBoxHorseName1
             // 
-            this.txtBoxHorseName1.Location = new System.Drawing.Point(13, 588);
+            this.txtBoxHorseName1.Location = new System.Drawing.Point(12, 587);
             this.txtBoxHorseName1.Name = "txtBoxHorseName1";
             this.txtBoxHorseName1.PlaceholderText = "1. Atın Adı";
             this.txtBoxHorseName1.Size = new System.Drawing.Size(175, 27);
@@ -255,15 +255,15 @@ namespace HorseRaceGame
             this.lblHorseName.BackColor = System.Drawing.Color.Transparent;
             this.lblHorseName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHorseName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHorseName.Location = new System.Drawing.Point(2, 553);
+            this.lblHorseName.Location = new System.Drawing.Point(12, 552);
             this.lblHorseName.Name = "lblHorseName";
-            this.lblHorseName.Size = new System.Drawing.Size(234, 23);
+            this.lblHorseName.Size = new System.Drawing.Size(233, 21);
             this.lblHorseName.TabIndex = 18;
             this.lblHorseName.Text = "At isimlerini giriniz:";
             // 
             // txtBoxHorseName2
             // 
-            this.txtBoxHorseName2.Location = new System.Drawing.Point(13, 621);
+            this.txtBoxHorseName2.Location = new System.Drawing.Point(12, 620);
             this.txtBoxHorseName2.Name = "txtBoxHorseName2";
             this.txtBoxHorseName2.PlaceholderText = "2. Atın Adı";
             this.txtBoxHorseName2.Size = new System.Drawing.Size(175, 27);
@@ -271,7 +271,7 @@ namespace HorseRaceGame
             // 
             // txtBoxHorseName3
             // 
-            this.txtBoxHorseName3.Location = new System.Drawing.Point(13, 654);
+            this.txtBoxHorseName3.Location = new System.Drawing.Point(12, 653);
             this.txtBoxHorseName3.Name = "txtBoxHorseName3";
             this.txtBoxHorseName3.PlaceholderText = "3. Atın Adı";
             this.txtBoxHorseName3.Size = new System.Drawing.Size(175, 27);
@@ -279,7 +279,7 @@ namespace HorseRaceGame
             // 
             // txtBoxHorseName4
             // 
-            this.txtBoxHorseName4.Location = new System.Drawing.Point(13, 687);
+            this.txtBoxHorseName4.Location = new System.Drawing.Point(12, 686);
             this.txtBoxHorseName4.Name = "txtBoxHorseName4";
             this.txtBoxHorseName4.PlaceholderText = "4. Atın Adı";
             this.txtBoxHorseName4.Size = new System.Drawing.Size(175, 27);
@@ -290,9 +290,9 @@ namespace HorseRaceGame
             this.btnAddName.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnAddName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddName.ForeColor = System.Drawing.Color.White;
-            this.btnAddName.Location = new System.Drawing.Point(191, 588);
+            this.btnAddName.Location = new System.Drawing.Point(193, 587);
             this.btnAddName.Name = "btnAddName";
-            this.btnAddName.Size = new System.Drawing.Size(32, 130);
+            this.btnAddName.Size = new System.Drawing.Size(37, 130);
             this.btnAddName.TabIndex = 22;
             this.btnAddName.Text = "EKLE";
             this.btnAddName.UseVisualStyleBackColor = false;

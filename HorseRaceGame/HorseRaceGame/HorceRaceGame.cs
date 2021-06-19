@@ -23,6 +23,18 @@ namespace HorseRaceGame
         Random random = new Random();
 
 
+        // ekle butonu ayarlandı.
+        private void btnAddName_Click(object sender, EventArgs e)
+        {
+            // textbox'tan veri olarak aldığımız verileri label'lara yazdırdık.
+            lblHorseName1.Text = txtBoxHorseName1.Text.ToUpper();
+            lblHorseName2.Text = txtBoxHorseName2.Text.ToUpper();
+            lblHorseName3.Text = txtBoxHorseName3.Text.ToUpper();
+            lblHorseName4.Text = txtBoxHorseName4.Text.ToUpper();
+        }
+
+
+
         private void timer_Tick(object sender, EventArgs e)
         {
             // label içinde gösterdiğimiz sayaç integer'a dönüştürüldü.
@@ -77,32 +89,32 @@ namespace HorseRaceGame
                     lblRaceResult.Visible = true;
 
                     // kazanan at ve diğerlerinin dereceleri ekrana yazdırıldı.
-                    lblRaceResult.Text = "1 numaralı at yarışı kazandı!\n2 numaralı at 2. oldu!\n3 numaralı at 3. oldu!\n4 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName1.Text + " yarışı kazandı!\n" + lblHorseName2.Text + " 2. oldu!\n" + lblHorseName3.Text + " 3. oldu!\n" + lblHorseName4.Text + " 4. oldu!";
                 }
-                else if ((horse1 > horse2) && (horse2 > horse3) && (horse4 > horse3))
+                else if ((horse1 > horse2) && (horse2 > horse4) && (horse4 > horse3))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "1 numaralı at yarışı kazandı!\n2 numaralı at 2. oldu!\n4 numaralı at 3. oldu!\n3 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName1.Text + " yarışı kazandı!\n" + lblHorseName2.Text + " 2. oldu!\n" + lblHorseName4.Text + " 3. oldu!\n" + lblHorseName3.Text + " 4. oldu!";
                 }
                 else if ((horse1 > horse3) && (horse3 > horse2) && (horse2 > horse4))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "1 numaralı at yarışı kazandı!\n3 numaralı at 2. oldu!\n2 numaralı at 3. oldu!\n4 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName1.Text + " yarışı kazandı!\n" + lblHorseName3.Text + " 2. oldu!\n" + lblHorseName2.Text + " 3. oldu!\n" + lblHorseName4.Text + " 4. oldu!";
                 }
                 else if ((horse1 > horse3) && (horse3 > horse4) && (horse4 > horse2))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "1 numaralı at yarışı kazandı!\n3 numaralı at 2. oldu!\n4 numaralı at 3. oldu!\n2 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName1.Text + " yarışı kazandı!\n" + lblHorseName3.Text + " 2. oldu!\n" + lblHorseName4.Text + "3. oldu!\n" + lblHorseName2.Text + " 4. oldu!";
                 }
-                else if ((horse1 > horse3) && (horse3 > horse2) && (horse4 > horse2))
+                else if ((horse1 > horse3) && (horse3 > horse4) && (horse4 > horse2))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "1 numaralı at yarışı kazandı!\n3 numaralı at 2. oldu!\n4 numaralı at 3. oldu!\n2 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName1.Text + " yarışı kazandı!\n" + lblHorseName3.Text + " 2. oldu!\n" + lblHorseName4.Text + " 3. oldu!\n" + lblHorseName4.Text + " 4. oldu!";
                 }
                 else if ((horse1 > horse4) && (horse4 > horse3) && (horse3 > horse2))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "1 numaralı at yarışı kazandı!\n4 numaralı at 2. oldu!\n3 numaralı at 3. oldu!\n2 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName1.Text + " yarışı kazandı!\n" + lblHorseName4.Text + " 2. oldu!\n" + lblHorseName3.Text + " 3. oldu!\n" + lblHorseName2.Text + " 4. oldu!";
                 }
 
 
@@ -111,32 +123,32 @@ namespace HorseRaceGame
                 if ((horse2 > horse1) && (horse1 > horse3) && (horse3 > horse4))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "2 numaralı at yarışı kazandı!\n1 numaralı at 2. oldu!\n3 numaralı at 3. oldu!\n4 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName2.Text + " yarışı kazandı!\n" + lblHorseName1.Text + " 2. oldu!\n" + lblHorseName3.Text + " 3. oldu!\n" + lblHorseName4.Text + " 4. oldu!";
                 }
                 else if ((horse2 > horse1) && (horse1 > horse4) && (horse4 > horse3))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "2 numaralı at yarışı kazandı!\n1 numaralı at 2. oldu!\n4 numaralı at 3. oldu!\n3 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName2.Text + " yarışı kazandı!\n" + lblHorseName1.Text + " 2. oldu!\n" + lblHorseName4.Text  + " 3. oldu!\n" + lblHorseName3.Text + " 4. oldu!";
                 }
                 else if ((horse2 > horse3) && (horse3 > horse1) && (horse1 > horse4))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "2 numaralı at yarışı kazandı!\n3 numaralı at 2. oldu!\n1 numaralı at 3. oldu!\n4 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName2.Text + " yarışı kazandı!\n" + lblHorseName3.Text + " 2. oldu!\n" + lblHorseName1.Text + " 3. oldu!\n" + lblHorseName4.Text + " 4. oldu!";
                 }
                 else if ((horse2 > horse3) && (horse3 > horse4) && (horse4 > horse1))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "2 numaralı at yarışı kazandı!\n3 numaralı at 2. oldu!\n4 numaralı at 3. oldu!\n1 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName2.Text + " yarışı kazandı!\n" + lblHorseName3.Text + " 2. oldu!\n" + lblHorseName4.Text + " 3. oldu!\n" + lblHorseName1.Text + " 4. oldu!";
                 }
                 else if ((horse2 > horse4) && (horse4 > horse1) && (horse1 > horse3))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "2 numaralı at yarışı kazandı!\n4 numaralı at 2. oldu!\n1 numaralı at 3. oldu!\n3 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName2.Text + " yarışı kazandı!\n" + lblHorseName4.Text + " 2. oldu!\n" + lblHorseName1.Text + " 3. oldu!\n" + lblHorseName3.Text  + " 4. oldu!";
                 }
                 else if ((horse2 > horse4) && (horse4 > horse3) && (horse3 > horse1))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "2 numaralı at yarışı kazandı!\n4 numaralı at 2. oldu!\n3 numaralı at 3. oldu!\n1 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName2.Text + " yarışı kazandı!\n" + lblHorseName4.Text + "2. oldu!\n" + lblHorseName3.Text + " 3. oldu!\n" + lblHorseName1.Text + " 4. oldu!";
                 }
 
 
@@ -145,32 +157,32 @@ namespace HorseRaceGame
                 if ((horse3 > horse4) && (horse4 > horse1) && (horse1 > horse2))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "3 numaralı at yarışı kazandı!\n4 numaralı at 2. oldu!\n1 numaralı at 3. oldu!\n2 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName3.Text + " yarışı kazandı!\n" + lblHorseName4.Text + " 2. oldu!\n" + lblHorseName1.Text + " 3. oldu!\n" + lblHorseName2.Text + " 4. oldu!";
                 }
                 else if ((horse3 > horse4) && (horse4 > horse2) && (horse2 > horse1))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "3 numaralı at yarışı kazandı!\n4 numaralı at 2. oldu!\n2 numaralı at 3. oldu!\n1 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName3.Text + " yarışı kazandı!\n" + lblHorseName4.Text + " 2. oldu!\n" + lblHorseName2.Text + " 3. oldu!\n" + lblHorseName1.Text + " 4. oldu!";
                 }
                 else if ((horse3 > horse2) && (horse2 > horse1) && (horse1 > horse4))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "3 numaralı at yarışı kazandı!\n2 numaralı at 2. oldu!\n1 numaralı at 3. oldu!\n4 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName3.Text + " yarışı kazandı!\n" + lblHorseName2.Text + " 2. oldu!\n" + lblHorseName1.Text + " 3. oldu!\n" + lblHorseName4.Text + " 4. oldu!";
                 }
                 else if ((horse3 > horse2) && (horse2 > horse4) && (horse4 > horse1))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "3 numaralı at yarışı kazandı!\n2 numaralı at 2. oldu!\n4 numaralı at 3. oldu!\n1 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName3.Text + " yarışı kazandı!\n" + lblHorseName2.Text + " 2. oldu!\n" + lblHorseName4.Text + " 3. oldu!\n" + lblHorseName1.Text + " 4. oldu!";
                 }
                 else if ((horse3 > horse1) && (horse1 > horse2) && (horse1 > horse4))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "3 numaralı at yarışı kazandı!\n1 numaralı at 2. oldu!\n2 numaralı at 3. oldu!\n4 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName3.Text + " yarışı kazandı!\n" + lblHorseName1.Text + " 2. oldu!\n" + lblHorseName2.Text + " 3. oldu!\n" + lblHorseName4.Text + " 4. oldu!";
                 }
                 else if ((horse3 > horse1) && (horse1 > horse4) && (horse4 > horse2))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "3 numaralı at yarışı kazandı!\n1 numaralı at 2. oldu!\n4 numaralı at 3. oldu!\n2 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName3.Text + " yarışı kazandı!\n" + lblHorseName1.Text + " 2. oldu!\n" + lblHorseName4.Text + " 3. oldu!\n" + lblHorseName2.Text + " 4. oldu!";
                 }
 
 
@@ -179,32 +191,32 @@ namespace HorseRaceGame
                 if ((horse4 > horse3) && (horse3 > horse2) && (horse2 > horse1))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "4 numaralı at yarışı kazandı!\n3 numaralı at 2. oldu!\n2 numaralı at 3. oldu!\n1 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName4.Text + " yarışı kazandı!\n" + lblHorseName3.Text + " 2. oldu!\n" + lblHorseName2.Text + " 3. oldu!\n" + lblHorseName1.Text + " 4. oldu!";
                 }
                 else if ((horse4 > horse3) && (horse3 > horse1) && (horse1 > horse2))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "4 numaralı at yarışı kazandı!\n3 numaralı at 2. oldu!\n1 numaralı at 3. oldu!\n2 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName4.Text + " yarışı kazandı!\n" + lblHorseName3.Text + " 2. oldu!\n" + lblHorseName1.Text + " 3. oldu!\n" + lblHorseName2.Text + " 4. oldu!";
                 }
                 else if ((horse4 > horse2) && (horse2 > horse3) && (horse3 > horse1))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "4 numaralı at yarışı kazandı!\n2 numaralı at 2. oldu!\n3 numaralı at 3. oldu!\n1 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName4.Text + " yarışı kazandı!\n" + lblHorseName2.Text + " 2. oldu!\n" + lblHorseName3.Text + " 3. oldu!\n" + lblHorseName1.Text + " 4. oldu!";
                 }
                 else if ((horse4 > horse2) && (horse2 > horse1) && (horse1 > horse3))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "4 numaralı at yarışı kazandı!\n2 numaralı at 2. oldu!\n1 numaralı at 3. oldu!\n3 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName4.Text + " yarışı kazandı!\n" + lblHorseName2.Text + " 2. oldu!\n" + lblHorseName1.Text + " 3. oldu!\n" + lblHorseName3.Text + " 4. oldu!";
                 }
                 else if ((horse4 > horse1) && (horse1 > horse2) && (horse2 > horse3))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "4 numaralı at yarışı kazandı!\n1 numaralı at 2. oldu!\n2 numaralı at 3. oldu!\n3 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName4.Text + " yarışı kazandı!\n" + lblHorseName1.Text + " 2. oldu!\n" + lblHorseName2.Text + " 3. oldu!\n" + lblHorseName3.Text + " 4. oldu!";
                 }
                 else if ((horse4 > horse1) && (horse1 > horse3) && (horse3 > horse2))
                 {
                     lblRaceResult.Visible = true;
-                    lblRaceResult.Text = "4 numaralı at yarışı kazandı!\n1 numaralı at 2. oldu!\n3 numaralı at 3. oldu!\n2 numaralı at 4. oldu!";
+                    lblRaceResult.Text = lblHorseName4.Text + " yarışı kazandı!\n" + lblHorseName1.Text + " 2. oldu!\n" + lblHorseName3.Text + " 3. oldu!\n" + lblHorseName2.Text + " 4. oldu!";
                 }
             }
 
@@ -213,19 +225,19 @@ namespace HorseRaceGame
             if (pcbHorse1.Left > pcbHorse3.Left + 5 && pcbHorse1.Left > pcbHorse2.Left + 1)
             {
                 // durum ekrana yazdırıldı.
-                lblRaceStatus.Text = "1 numaralı at öne geçti!";
+                lblRaceStatus.Text = lblHorseName1.Text + " öne geçti!";
             }
             else if (pcbHorse2.Left > pcbHorse1.Left + 5 && pcbHorse2.Left > pcbHorse3.Left + 1)
             {
-                lblRaceStatus.Text = "2 numaralı at öne geçti!";
+                lblRaceStatus.Text = lblHorseName2.Text + " öne geçti!";
             }
             else if (pcbHorse3.Left > pcbHorse1.Left + 5 && pcbHorse3.Left > pcbHorse2.Left + 1)
             {
-                lblRaceStatus.Text = "3 numaralı at öne geçti!";
+                lblRaceStatus.Text = lblHorseName3.Text + " öne geçti!";
             }
             else
             {
-                lblRaceStatus.Text = "4 numaralı at öne geçti!";
+                lblRaceStatus.Text = lblHorseName4.Text + " öne geçti!";
             }
         }
 
@@ -273,17 +285,6 @@ namespace HorseRaceGame
         private void btnStart_Click(object sender, EventArgs e)
         {
             // form1'in içinde tanımlanması için
-        }
-
-
-        // ekle butonu ayarlandı.
-        private void btnAddName_Click(object sender, EventArgs e)
-        {
-            // textbox'tan veri olarak aldığımız verileri label'lara yazdırdık.
-            lblHorseName1.Text = txtBoxHorseName1.Text.ToUpper();
-            lblHorseName2.Text = txtBoxHorseName2.Text.ToUpper();
-            lblHorseName3.Text = txtBoxHorseName3.Text.ToUpper();
-            lblHorseName4.Text = txtBoxHorseName4.Text.ToUpper();
         }
     }
 }
