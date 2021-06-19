@@ -25,72 +25,63 @@ namespace ColorTeachingGame
 
         public void SelectColor()
         {
-            Random r = new Random();
-
-            int[] colors = new int[9];
 
             int random;
+            int[] colors = new int[10];
 
-            for (int i = 0; i < colors.Length; i++)
+            Random r = new Random();
+
+            random = r.Next(0, 10);
+
+            foreach (var item in colors)
             {
-                bool isTrue = true;
+                int result = String.Compare(item.ToString(), colors.ToString());        // result değişkeninde compare metodu ile karşılaştırma yaptık.
 
-                random = r.Next(0, 10);
+                if (result == item)                                                    // result değişkeninin 0'a eşit olması durumunu kontrol ettik.
+                {
+                    
+                }
+            }
 
-                foreach (var x in colors)
-                {
-                    if (x == random)
-                    {
-                        i--;
-                        isTrue = false;
-                        break;
-                    }
-                }
-
-                if (isTrue)
-                {
-                    colors[i] = random;
-                }
-                else if (random == 0)
-                {
-                    lblColor.Text = "RED";
-                }
-                else if (random == 1)
-                {
-                    lblColor.Text = "WHITE";
-                }
-                else if (random == 2)
-                {
-                    lblColor.Text = "GREEN";
-                }
-                else if (random == 3)
-                {
-                    lblColor.Text = "PURPLE";
-                }
-                else if (random == 4)
-                {
-                    lblColor.Text = "GRAY";
-                }
-                else if (random == 5)
-                {
-                    lblColor.Text = "YELLOW";
-                }
-                else if (random == 6)
-                {
-                    lblColor.Text = "BLACK";
-                }
-                else if (random == 7)
-                {
-                    lblColor.Text = "ORANGE";
-                }
-                else if (random == 8)
-                {
-                    lblColor.Text = "PINK";
-                }
-                else if (random == 9)
-                {
-                    lblColor.Text = "BLUE";
-                }
+            if (random == 0)
+            {
+                lblColor.Text = "RED";
+            }
+            else if (random == 1)
+            {
+                lblColor.Text = "WHITE";
+            }
+            else if (random == 2)
+            {
+                lblColor.Text = "GREEN";
+            }
+            else if (random == 3)
+            {
+                lblColor.Text = "PURPLE";
+            }
+            else if (random == 4)
+            {
+                lblColor.Text = "GRAY";
+            }
+            else if (random == 5)
+            {
+                lblColor.Text = "YELLOW";
+            }
+            else if (random == 6)
+            {
+                lblColor.Text = "BLACK";
+            }
+            else if (random == 7)
+            {
+                lblColor.Text = "ORANGE";
+            }
+            else if (random == 8)
+            {
+                lblColor.Text = "PINK";
+            }
+            else if (random == 9)
+            {
+                lblColor.Text = "BLUE";
             }
         }
 

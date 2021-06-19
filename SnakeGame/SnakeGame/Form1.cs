@@ -17,6 +17,7 @@ namespace SnakeGame
             InitializeComponent();
         }
 
+
         Snake snake;
         Direction direction1;
         PictureBox[] pbSnakeParts;
@@ -30,6 +31,7 @@ namespace SnakeGame
             timer1.Stop();
         }
 
+
         private void NewGame()
         {
             anyFood = false;
@@ -38,22 +40,30 @@ namespace SnakeGame
             direction1 = new Direction(-10, 0);
             pbSnakeParts = new PictureBox[0];
 
+
             for (int i = 0; i < 3; i++)                                     // yılanın parçalarının uzunluğu 3 olduğu için.
             {
                 Array.Resize(ref pbSnakeParts, pbSnakeParts.Length + 1);
-                pbSnakeParts[i] = pbAdd();
+                pbSnakeParts[i] = PbAdd();
             }
+
+
             btnRestart.Enabled = false;
             timer1.Start();
             cboChangeColor.Enabled = false;
             btnStart.Enabled = false;
         }
 
-        private PictureBox pbAdd()
+
+        private PictureBox PbAdd()
         {
             PictureBox pictureBox = new PictureBox();
+            pictureBox.Size = new Size(10, 10);
+            pictureBox.Location = snake.GetPos(pbSnakeParts.Length - 1);
+            panel1.Controls.Add(pictureBox);
 
-            if (cboChangeColor.Text == "Kırmızı")                       // combobox seçimine göre renkler belirtildi.
+
+            if (cboChangeColor.Text == "Kırmızı")                           // combobox seçimine göre renkler belirtildi.
             {
                 pictureBox.BackColor = Color.Red;
             }
@@ -91,22 +101,22 @@ namespace SnakeGame
             }
             else
             {
-                pictureBox.BackColor = Color.White;
+                pictureBox.BackColor = Color.White;                         // yılan rengi seçilmediğinde default rengin beyaz gelmesi sağlandı.
             }
 
-            pictureBox.Size = new Size(10, 10);
-            pictureBox.Location = snake.GetPos(pbSnakeParts.Length - 1);
-            panel1.Controls.Add(pictureBox);
+ 
             return pictureBox;
         }
 
-        private void pbUpdate()
+
+        private void PbUpdate()
         {
             for (int i = 0; i < pbSnakeParts.Length; i++)
             {
                 pbSnakeParts[i].Location = snake.GetPos(i);
             }
         }
+
 
         // Yön tuşları ayarlandı.
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -118,7 +128,6 @@ namespace SnakeGame
                     direction1 = new Direction(0, -10);
                 }
             }
-
             else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
                 if (direction1._y != -10)
@@ -126,7 +135,6 @@ namespace SnakeGame
                     direction1 = new Direction(0, 10);
                 }
             }
-
             else if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
             {
                 if (direction1._x != 10)
@@ -134,40 +142,48 @@ namespace SnakeGame
                     direction1 = new Direction(-10, 0);
                 }
             }
-
             else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
             {
                 if (direction1._x != -10)
                 {
-                    direction1 = new Direction(10, 0);
+                    direction1 = new Direction(10, -0);
                 }
             }
         }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblScore.Text = "Skor: " + score.ToString();                    // skor ekrana yazdırıldı.
             snake.Go(direction1);                                           // yılanın ilerlemesi için yön belirtildi.
-            pbUpdate();                                                     // fonksiyonlar çağırıldı.
-            createFood();
+
+
+            // fonksiyonlar çağırıldı.
+            PbUpdate();
+            CreateFood();
             DidEatFood();
             HitItself();
+
+
+            // duvara çarpma özelliğini aktif etmek için bu fonksiyonu yorum satırı olmaktan çıkartmalısınız.
             HitTheWall();
         }
 
-        public void createFood()
+
+        public void CreateFood()
         {
             if (!anyFood)
             {
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.BackColor = Color.Red;                           // yem rengi kırmızı olarak ayarlandı.
-                pictureBox.Size = new Size(10, 10);
+                pictureBox.Size = new Size(10, 10);                         // yem büyüklüğü ayarlandı.
                 pictureBox.Location = new Point(random.Next(panel1.Width / 10) * 10, random.Next(panel1.Height / 10) * 10);
                 pbFood = pictureBox;
                 anyFood = true;
                 panel1.Controls.Add(pictureBox);
             }
         }
+
 
         public void DidEatFood()
         {
@@ -176,12 +192,14 @@ namespace SnakeGame
                 score += 10;                                                // her yem yendiğinde skor 10 artırıldı.
                 snake.Grow();                                               // yılan yemi yediğinde büyütüldü.
                 Array.Resize(ref pbSnakeParts, pbSnakeParts.Length + 1);
-                pbSnakeParts[pbSnakeParts.Length - 1] = pbAdd();
+                pbSnakeParts[pbSnakeParts.Length - 1] = PbAdd();
                 anyFood = false;
                 panel1.Controls.Remove(pbFood);
             }
         }
 
+
+        // yılanın kendine çarpma fonksiyonu yazıldı.
         public void HitItself()
         {
             for (int i = 1; i < snake.SnakeSize; i++)
@@ -193,6 +211,18 @@ namespace SnakeGame
             }
         }
 
+
+        // yenilgi fonksiyonu yazıldı.
+        public void GameOver()
+        {
+            timer1.Stop();
+            MessageBox.Show("Game Over!");
+            btnRestart.Enabled = true;
+            cboChangeColor.Enabled = true;
+        }
+
+
+        // yılanın duvara çarpma fonksiyonu yazıldı.        NOT: Bu fonksiyonu aktif etmek için timer1'in içinde yorum satırı olmaktan çıkartmalısınız.
         public void HitTheWall()
         {
             Point point = snake.GetPos(0);
@@ -203,19 +233,13 @@ namespace SnakeGame
             }
         }
 
-        public void GameOver()
-        {
-            timer1.Stop();
-            MessageBox.Show("Game Over!");
-            btnRestart.Enabled = true;
-            cboChangeColor.Enabled = true;
-        }
 
         private void btnRestart_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             NewGame();
         }
+
 
         private void btnStart_Click(object sender, EventArgs e)
         {

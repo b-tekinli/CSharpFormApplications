@@ -13,6 +13,7 @@ namespace SnakeGame
         int snakeSize;
         Direction direction1;
 
+
         public Snake()
         {
             snakeParts = new SnakeParts[3];                         // başlangıçta yılanın 3 parça olması sağlandı.
@@ -21,6 +22,7 @@ namespace SnakeGame
             snakeParts[1] = new SnakeParts(160, 150);
             snakeParts[2] = new SnakeParts(170, 150);
         }
+
 
         // yılanın ilerlemesi ayarlandı.
         public void Go(Direction direction)
@@ -31,16 +33,17 @@ namespace SnakeGame
             {
             
             }
-
             else
             {
-                for (int i = snakeParts.Length - 1; i > 0; i--)     // hangi yöne gitmek isterse gidebilsin diye 0 dahil edilmedi.
+                for (int i = snakeParts.Length - 1; i > 0; i--)                                     // hangi yöne gitmek isterse gidebilsin diye 0 dahil edilmedi.
                 {
                     snakeParts[i] = new SnakeParts(snakeParts[i - 1].x_, snakeParts[i - 1].y_);     // yılanın diğer parçalarına baş kısmı takip ettirildi.
                 }
+
                 snakeParts[0] = new SnakeParts(snakeParts[0].x_ + direction._x, snakeParts[0].y_ + direction._y);
             }
         }
+
 
         // yem yediğinde boyutu büyümesi için fonksiyon yazıldı.
         public void Grow()
@@ -50,10 +53,12 @@ namespace SnakeGame
             snakeSize++;
         }
 
+
         public Point GetPos(int number)
         {
             return new Point(snakeParts[number].x_, snakeParts[number].y_);
         }
+
 
         public int SnakeSize
         {
@@ -64,12 +69,14 @@ namespace SnakeGame
         }
     }
 
+
     public class SnakeParts
     {
         public int x_;
         public int y_;
         public readonly int size_x;
         public readonly int size_y;
+
 
         public SnakeParts(int x, int y)
         {
@@ -81,10 +88,12 @@ namespace SnakeGame
         }
     }
 
+
     public class Direction
     {
         public readonly int _x;
         public readonly int _y;
+
 
         public Direction(int x, int y)
         {
