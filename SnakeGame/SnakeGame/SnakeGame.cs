@@ -39,7 +39,7 @@ namespace SnakeGame
         {
             anyFood = false;                                                // yem var mı yok mu diye kontrol edildi.
             score = 0;
-            snake = new Snake();
+            snake = new Snake(panel.Size);
             direction1 = new Direction(-10, 0);
             pbSnakeParts = new PictureBox[0];
 
@@ -169,7 +169,6 @@ namespace SnakeGame
             CreateFood();
             DidEatFood();
             HitItself();
-            HitTheWall();
         }
 
 
@@ -213,18 +212,6 @@ namespace SnakeGame
                 {
                     GameOver();
                 }
-            }
-        }
-
-
-        // yılanın duvara çarpma fonksiyonu yazıldı.
-        public void HitTheWall()
-        {
-            Point point = snake.GetPos(0);
-
-            if (point.X < 0 || point.X > panel.Width - 10 || point.Y < 0 || point.Y > panel.Height - 10)
-            {
-                GameOver();
             }
         }
 

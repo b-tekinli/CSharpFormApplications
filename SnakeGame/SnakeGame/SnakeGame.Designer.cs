@@ -48,7 +48,7 @@ namespace SnakeGame
             this.panel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel.Location = new System.Drawing.Point(12, 79);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(786, 498);
+            this.panel.Size = new System.Drawing.Size(790, 500);
             this.panel.TabIndex = 0;
             // 
             // lblScore
@@ -123,9 +123,9 @@ namespace SnakeGame
             // 
             this.lblGameTitle.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblGameTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblGameTitle.Location = new System.Drawing.Point(345, 9);
+            this.lblGameTitle.Location = new System.Drawing.Point(287, 9);
             this.lblGameTitle.Name = "lblGameTitle";
-            this.lblGameTitle.Size = new System.Drawing.Size(319, 67);
+            this.lblGameTitle.Size = new System.Drawing.Size(383, 67);
             this.lblGameTitle.TabIndex = 9;
             this.lblGameTitle.Text = "SNAKE GAME";
             this.lblGameTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

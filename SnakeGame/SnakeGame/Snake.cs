@@ -12,10 +12,12 @@ namespace SnakeGame
         SnakeParts[] snakeParts;                                    // yılanın gövde parçaları dizide tutuldu.
         int snakeSize;
         Direction direction1;
+        Size size;
 
 
-        public Snake()
+        public Snake(Size gameSize)
         {
+            size = gameSize;
             snakeParts = new SnakeParts[3];                         // başlangıçta yılanın 3 parça olması sağlandı.
             snakeSize = 3;
             snakeParts[0] = new SnakeParts(150, 150);               // yılanın başlangıç konumu belirtildi -baş kısmı-.
@@ -41,7 +43,16 @@ namespace SnakeGame
                     snakeParts[i] = new SnakeParts(snakeParts[i - 1].x_, snakeParts[i - 1].y_);
                 }
 
-                snakeParts[0] = new SnakeParts(snakeParts[0].x_ + direction._x, snakeParts[0].y_ + direction._y);
+                snakeParts[0] = new SnakeParts((snakeParts[0].x_ + direction._x) % size.Width, (snakeParts[0].y_ + direction._y) % size.Height);
+
+                if (snakeParts[0].x_ < 0)
+                {
+                    snakeParts[0].x_ += size.Width;
+                }
+                if (snakeParts[0].y_ < 0)
+                {
+                    snakeParts[0].y_ += size.Height;
+                }
             }
         }
 
