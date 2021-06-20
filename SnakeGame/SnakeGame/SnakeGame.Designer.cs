@@ -150,7 +150,7 @@ namespace SnakeGame
             this.Name = "SnakeGame";
             this.Text = "Snake Game";
             this.Load += new System.EventHandler(this.SnakeGame_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SnakeGame_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

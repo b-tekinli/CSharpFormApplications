@@ -18,6 +18,7 @@ namespace SnakeGame
         }
 
 
+        // gerekli değişkenler ve nesneler oluşturuldu.
         Snake snake;
         Direction direction1;
         PictureBox[] pbSnakeParts;
@@ -29,26 +30,28 @@ namespace SnakeGame
 
         private void SnakeGame_Load(object sender, EventArgs e)
         {
-            timer.Stop();
+            timer.Stop();                                                   // oyun açıldığında oyunun başlamaması kontrol edildi.
         }
 
 
+        // yeni oyunun başlaması için fonksiyon tanımlandı.
         private void NewGame()
         {
-            anyFood = false;
+            anyFood = false;                                                // yem var mı yok mu diye kontrol edildi.
             score = 0;
             snake = new Snake();
             direction1 = new Direction(-10, 0);
             pbSnakeParts = new PictureBox[0];
 
 
-            for (int i = 0; i < 3; i++)                                     // yılanın parçalarının uzunluğu 3 olduğu için.
+            for (int i = 0; i < 3; i++)                                     // yılanın parçalarının uzunluğu 3 olduğu için 3'e kadar döndürüldü.
             {
                 Array.Resize(ref pbSnakeParts, pbSnakeParts.Length + 1);
                 pbSnakeParts[i] = PbAdd();
             }
 
-
+            
+            // oyun başladığı anda ekranda aktif ve devre dışı bırakılacak özellikler ayarlandı.
             btnRestart.Enabled = false;
             timer.Start();
             cboChangeColor.Enabled = false;
@@ -56,15 +59,16 @@ namespace SnakeGame
         }
 
 
+        // oyun başladığında panele eklenecek nesneler için fonksiyon tanımlandı.
         private PictureBox PbAdd()
         {
             PictureBox pictureBox = new PictureBox();
-            pictureBox.Size = new Size(10, 10);
+            pictureBox.Size = new Size(10, 10);                             // yılan büyüklüğü belirtildi.
             pictureBox.Location = snake.GetPos(pbSnakeParts.Length - 1);
             panel.Controls.Add(pictureBox);
 
 
-            if (cboChangeColor.Text == "Kırmızı")                           // combobox seçimine göre renkler belirtildi.
+            if (cboChangeColor.Text == "Kırmızı")                           // combobox'taki yılan rengi seçimine göre renkler belirtildi.
             {
                 pictureBox.BackColor = Color.Red;
             }
@@ -110,6 +114,7 @@ namespace SnakeGame
         }
 
 
+        // yılanın oyun durumundaki konumunun güncellenmesi için metod yazıldı.
         private void PbUpdate()
         {
             for (int i = 0; i < pbSnakeParts.Length; i++)
@@ -119,8 +124,8 @@ namespace SnakeGame
         }
 
 
-        // Yön tuşları ayarlandı.
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        // yön tuşları ayarlandı.
+        private void SnakeGame_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)                // yukarı ok tuşu ve W tuşuna basıldığında yukarı hareket etme ayarlandı.
             {
@@ -164,19 +169,18 @@ namespace SnakeGame
             CreateFood();
             DidEatFood();
             HitItself();
-
-            // duvara çarpma özelliğini aktif etmek için bu fonksiyonu yorum satırı olmaktan çıkartmalısınız.
             HitTheWall();
         }
 
 
+        // yem oluşturmak için metod yazıldı.
         public void CreateFood()
         {
             if (!anyFood)
             {
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.BackColor = Color.White;                         // yem rengi beyaz olarak ayarlandı.
-                pictureBox.Size = new Size(10, 10);                         // yem büyüklüğü ayarlandı.
+                pictureBox.BackColor = Color.Red;                          // yem rengi kırmızı olarak ayarlandı.
+                pictureBox.Size = new Size(10, 10);                        // yem büyüklüğü ayarlandı.
                 pictureBox.Location = new Point(random.Next(panel.Width / 10) * 10, random.Next(panel.Height / 10) * 10);
                 pbFood = pictureBox;
                 anyFood = true;
@@ -185,6 +189,7 @@ namespace SnakeGame
         }
 
 
+        // yemi yiyip yemediğini kontrol eden metod yazıldı.
         public void DidEatFood()
         {
             if (snake.GetPos(0) == pbFood.Location)
@@ -212,7 +217,7 @@ namespace SnakeGame
         }
 
 
-        // yılanın duvara çarpma fonksiyonu yazıldı.        NOT: Bu fonksiyonu aktif etmek için timer'ın içinde yorum satırı olmaktan çıkartmalısınız.
+        // yılanın duvara çarpma fonksiyonu yazıldı.
         public void HitTheWall()
         {
             Point point = snake.GetPos(0);
@@ -234,6 +239,7 @@ namespace SnakeGame
         }
 
 
+        // yeniden başlat butonu
         private void btnRestart_Click(object sender, EventArgs e)
         {
             panel.Controls.Clear();
@@ -241,6 +247,7 @@ namespace SnakeGame
         }
 
 
+        // başlat butonu
         private void btnStart_Click(object sender, EventArgs e)
         {
             NewGame();
