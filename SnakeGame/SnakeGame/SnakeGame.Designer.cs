@@ -48,14 +48,14 @@ namespace SnakeGame
             this.panel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel.Location = new System.Drawing.Point(12, 79);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(769, 463);
+            this.panel.Size = new System.Drawing.Size(786, 498);
             this.panel.TabIndex = 0;
             // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblScore.Location = new System.Drawing.Point(829, 341);
+            this.lblScore.Location = new System.Drawing.Point(844, 340);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(65, 21);
             this.lblScore.TabIndex = 4;
@@ -67,7 +67,7 @@ namespace SnakeGame
             this.btnRestart.Enabled = false;
             this.btnRestart.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRestart.ForeColor = System.Drawing.Color.White;
-            this.btnRestart.Location = new System.Drawing.Point(829, 209);
+            this.btnRestart.Location = new System.Drawing.Point(844, 208);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(214, 58);
             this.btnRestart.TabIndex = 5;
@@ -84,13 +84,12 @@ namespace SnakeGame
             "Sarı",
             "AçıkYeşil",
             "Turuncu",
-            "Beyaz",
             "Mor",
             "AçıkMavi",
             "KoyuYeşil",
             "KoyuMavi",
             "Pembe"});
-            this.cboChangeColor.Location = new System.Drawing.Point(804, 476);
+            this.cboChangeColor.Location = new System.Drawing.Point(819, 475);
             this.cboChangeColor.Name = "cboChangeColor";
             this.cboChangeColor.Size = new System.Drawing.Size(250, 31);
             this.cboChangeColor.TabIndex = 6;
@@ -101,7 +100,7 @@ namespace SnakeGame
             this.lblChangeColor.BackColor = System.Drawing.Color.Transparent;
             this.lblChangeColor.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblChangeColor.ForeColor = System.Drawing.Color.Black;
-            this.lblChangeColor.Location = new System.Drawing.Point(804, 438);
+            this.lblChangeColor.Location = new System.Drawing.Point(819, 437);
             this.lblChangeColor.Name = "lblChangeColor";
             this.lblChangeColor.Size = new System.Drawing.Size(250, 23);
             this.lblChangeColor.TabIndex = 7;
@@ -112,7 +111,7 @@ namespace SnakeGame
             this.btnStart.BackColor = System.Drawing.Color.Firebrick;
             this.btnStart.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Location = new System.Drawing.Point(829, 119);
+            this.btnStart.Location = new System.Drawing.Point(844, 118);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(214, 52);
             this.btnStart.TabIndex = 8;
@@ -124,7 +123,7 @@ namespace SnakeGame
             // 
             this.lblGameTitle.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblGameTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblGameTitle.Location = new System.Drawing.Point(336, 9);
+            this.lblGameTitle.Location = new System.Drawing.Point(345, 9);
             this.lblGameTitle.Name = "lblGameTitle";
             this.lblGameTitle.Size = new System.Drawing.Size(319, 67);
             this.lblGameTitle.TabIndex = 9;
@@ -140,7 +139,7 @@ namespace SnakeGame
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1071, 550);
+            this.ClientSize = new System.Drawing.Size(1094, 592);
             this.Controls.Add(this.lblGameTitle);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblChangeColor);
