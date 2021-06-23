@@ -67,7 +67,7 @@ namespace HorseRaceGame
             this.lblFinishLine.ForeColor = System.Drawing.Color.White;
             this.lblFinishLine.Location = new System.Drawing.Point(1217, -3);
             this.lblFinishLine.Name = "lblFinishLine";
-            this.lblFinishLine.Size = new System.Drawing.Size(26, 495);
+            this.lblFinishLine.Size = new System.Drawing.Size(26, 536);
             this.lblFinishLine.TabIndex = 0;
             this.lblFinishLine.Text = "FINISH";
             this.lblFinishLine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -95,9 +95,9 @@ namespace HorseRaceGame
             // lblBlackLine
             // 
             this.lblBlackLine.BackColor = System.Drawing.Color.Black;
-            this.lblBlackLine.Location = new System.Drawing.Point(2, 492);
+            this.lblBlackLine.Location = new System.Drawing.Point(2, 521);
             this.lblBlackLine.Name = "lblBlackLine";
-            this.lblBlackLine.Size = new System.Drawing.Size(1241, 48);
+            this.lblBlackLine.Size = new System.Drawing.Size(1241, 41);
             this.lblBlackLine.TabIndex = 4;
             this.lblBlackLine.Text = "label1";
             // 
@@ -147,7 +147,7 @@ namespace HorseRaceGame
             this.btnStart.BackColor = System.Drawing.Color.Green;
             this.btnStart.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Location = new System.Drawing.Point(315, 575);
+            this.btnStart.Location = new System.Drawing.Point(315, 585);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(146, 60);
             this.btnStart.TabIndex = 9;
@@ -161,7 +161,7 @@ namespace HorseRaceGame
             this.lblRaceStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRaceStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblRaceStatus.ForeColor = System.Drawing.Color.White;
-            this.lblRaceStatus.Location = new System.Drawing.Point(246, 643);
+            this.lblRaceStatus.Location = new System.Drawing.Point(246, 653);
             this.lblRaceStatus.Name = "lblRaceStatus";
             this.lblRaceStatus.Size = new System.Drawing.Size(703, 75);
             this.lblRaceStatus.TabIndex = 10;
@@ -173,7 +173,7 @@ namespace HorseRaceGame
             this.lblMetre.BackColor = System.Drawing.Color.DarkRed;
             this.lblMetre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMetre.ForeColor = System.Drawing.Color.White;
-            this.lblMetre.Location = new System.Drawing.Point(558, 573);
+            this.lblMetre.Location = new System.Drawing.Point(558, 583);
             this.lblMetre.Name = "lblMetre";
             this.lblMetre.Size = new System.Drawing.Size(141, 70);
             this.lblMetre.TabIndex = 11;
@@ -186,9 +186,9 @@ namespace HorseRaceGame
             this.lblRaceResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRaceResult.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblRaceResult.ForeColor = System.Drawing.Color.White;
-            this.lblRaceResult.Location = new System.Drawing.Point(955, 575);
+            this.lblRaceResult.Location = new System.Drawing.Point(955, 585);
             this.lblRaceResult.Name = "lblRaceResult";
-            this.lblRaceResult.Size = new System.Drawing.Size(288, 145);
+            this.lblRaceResult.Size = new System.Drawing.Size(288, 143);
             this.lblRaceResult.TabIndex = 12;
             this.lblRaceResult.Text = "Yarışma Sonucu";
             this.lblRaceResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,7 +198,7 @@ namespace HorseRaceGame
             this.btnRestart.BackColor = System.Drawing.Color.Red;
             this.btnRestart.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRestart.ForeColor = System.Drawing.Color.White;
-            this.btnRestart.Location = new System.Drawing.Point(731, 575);
+            this.btnRestart.Location = new System.Drawing.Point(731, 585);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(146, 60);
             this.btnRestart.TabIndex = 13;
@@ -211,7 +211,7 @@ namespace HorseRaceGame
             this.lblCounter.BackColor = System.Drawing.Color.DarkRed;
             this.lblCounter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCounter.ForeColor = System.Drawing.Color.White;
-            this.lblCounter.Location = new System.Drawing.Point(495, 573);
+            this.lblCounter.Location = new System.Drawing.Point(495, 583);
             this.lblCounter.Name = "lblCounter";
             this.lblCounter.Size = new System.Drawing.Size(66, 70);
             this.lblCounter.TabIndex = 14;
@@ -235,16 +235,16 @@ namespace HorseRaceGame
             // pcbHorse4
             // 
             this.pcbHorse4.Image = ((System.Drawing.Image)(resources.GetObject("pcbHorse4.Image")));
-            this.pcbHorse4.Location = new System.Drawing.Point(2, 400);
+            this.pcbHorse4.Location = new System.Drawing.Point(1, 400);
             this.pcbHorse4.Name = "pcbHorse4";
-            this.pcbHorse4.Size = new System.Drawing.Size(186, 89);
-            this.pcbHorse4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbHorse4.Size = new System.Drawing.Size(186, 118);
+            this.pcbHorse4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbHorse4.TabIndex = 16;
             this.pcbHorse4.TabStop = false;
             // 
             // txtBoxHorseName1
             // 
-            this.txtBoxHorseName1.Location = new System.Drawing.Point(12, 587);
+            this.txtBoxHorseName1.Location = new System.Drawing.Point(12, 597);
             this.txtBoxHorseName1.Name = "txtBoxHorseName1";
             this.txtBoxHorseName1.PlaceholderText = "1. Atın Adı";
             this.txtBoxHorseName1.Size = new System.Drawing.Size(175, 27);
@@ -255,7 +255,7 @@ namespace HorseRaceGame
             this.lblHorseName.BackColor = System.Drawing.Color.Transparent;
             this.lblHorseName.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHorseName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHorseName.Location = new System.Drawing.Point(12, 552);
+            this.lblHorseName.Location = new System.Drawing.Point(12, 573);
             this.lblHorseName.Name = "lblHorseName";
             this.lblHorseName.Size = new System.Drawing.Size(233, 21);
             this.lblHorseName.TabIndex = 18;
@@ -263,7 +263,7 @@ namespace HorseRaceGame
             // 
             // txtBoxHorseName2
             // 
-            this.txtBoxHorseName2.Location = new System.Drawing.Point(12, 620);
+            this.txtBoxHorseName2.Location = new System.Drawing.Point(12, 630);
             this.txtBoxHorseName2.Name = "txtBoxHorseName2";
             this.txtBoxHorseName2.PlaceholderText = "2. Atın Adı";
             this.txtBoxHorseName2.Size = new System.Drawing.Size(175, 27);
@@ -271,7 +271,7 @@ namespace HorseRaceGame
             // 
             // txtBoxHorseName3
             // 
-            this.txtBoxHorseName3.Location = new System.Drawing.Point(12, 653);
+            this.txtBoxHorseName3.Location = new System.Drawing.Point(12, 663);
             this.txtBoxHorseName3.Name = "txtBoxHorseName3";
             this.txtBoxHorseName3.PlaceholderText = "3. Atın Adı";
             this.txtBoxHorseName3.Size = new System.Drawing.Size(175, 27);
@@ -279,7 +279,7 @@ namespace HorseRaceGame
             // 
             // txtBoxHorseName4
             // 
-            this.txtBoxHorseName4.Location = new System.Drawing.Point(12, 686);
+            this.txtBoxHorseName4.Location = new System.Drawing.Point(12, 696);
             this.txtBoxHorseName4.Name = "txtBoxHorseName4";
             this.txtBoxHorseName4.PlaceholderText = "4. Atın Adı";
             this.txtBoxHorseName4.Size = new System.Drawing.Size(175, 27);
@@ -290,7 +290,7 @@ namespace HorseRaceGame
             this.btnAddName.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnAddName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddName.ForeColor = System.Drawing.Color.White;
-            this.btnAddName.Location = new System.Drawing.Point(193, 587);
+            this.btnAddName.Location = new System.Drawing.Point(193, 597);
             this.btnAddName.Name = "btnAddName";
             this.btnAddName.Size = new System.Drawing.Size(37, 130);
             this.btnAddName.TabIndex = 22;
