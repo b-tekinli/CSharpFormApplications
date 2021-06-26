@@ -116,16 +116,16 @@ namespace ColorTeachingGame
             this.lstColors.FormattingEnabled = true;
             this.lstColors.ItemHeight = 20;
             this.lstColors.Items.AddRange(new object[] {
-            "RED",
-            "YELLOW",
-            "PURPLE",
-            "ORANGE",
-            "PINK",
-            "GRAY",
-            "WHITE",
-            "BLACK",
-            "BLUE",
-            "GREEN"});
+            "Red",
+            "Yellow",
+            "Purple",
+            "Orange",
+            "Pink",
+            "Gray",
+            "White",
+            "Black",
+            "Blue",
+            "Green"});
             this.lstColors.Location = new System.Drawing.Point(1209, 111);
             this.lstColors.Name = "lstColors";
             this.lstColors.Size = new System.Drawing.Size(145, 224);

@@ -33,7 +33,7 @@ namespace ColorTeachingGame
 
             int colorId = random.Next(0, 10);
 
-            lblColor.Text = _colors[colorId] + " adlı rengi seçiniz!".ToUpper();
+            lblColor.Text = _colors[colorId].ToUpper() + " adlı rengi seçiniz!".ToUpper();
             lblColor.Tag = _colors[colorId];
         }
 
@@ -105,6 +105,7 @@ namespace ColorTeachingGame
         private void Panel_MouseClick(object sender, MouseEventArgs e)
         {
             var panel = (Panel)sender;
+
 
             var wantColor = Color.FromName(lblColor.Tag.ToString());
 
