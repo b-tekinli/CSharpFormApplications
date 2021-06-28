@@ -115,17 +115,6 @@ namespace ColorTeachingGame
             // 
             this.lstColors.FormattingEnabled = true;
             this.lstColors.ItemHeight = 20;
-            this.lstColors.Items.AddRange(new object[] {
-            "RED",
-            "YELLOW",
-            "PURPLE",
-            "ORANGE",
-            "PINK",
-            "GRAY",
-            "WHITE",
-            "BLACK",
-            "BLUE",
-            "GREEN"});
             this.lstColors.Location = new System.Drawing.Point(1209, 111);
             this.lstColors.Name = "lstColors";
             this.lstColors.Size = new System.Drawing.Size(145, 224);
@@ -150,6 +139,7 @@ namespace ColorTeachingGame
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Color Teaching Game";
+            this.Load += new System.EventHandler(this.Game_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
