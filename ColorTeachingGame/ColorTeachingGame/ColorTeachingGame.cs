@@ -65,7 +65,7 @@ namespace ColorTeachingGame
 
 
         // zamanın hızı ayarlandı.
-        public void ConfigureTimer(int interval = 500,bool isEnabled = true)
+        public void ConfigureTimer(int interval = 500, bool isEnabled = true)
         {
             timer.Interval = 800;
             timer.Enabled = true;
@@ -146,7 +146,7 @@ namespace ColorTeachingGame
             var wantColor = Color.FromName(lblColor.Tag.ToString());
             lblTime.Text = "10";
 
-            
+
             // panel rengi istenen renge eşitse
             if (panel.BackColor == wantColor)
             {
@@ -155,11 +155,11 @@ namespace ColorTeachingGame
                 {
                     // red rengi listbox'tan kaldırıldı.
                     lstColors.Items.Remove("RED");
-                    
+
                     // doğru renge tıklandığı için +1 puan eklendi.
                     lblScore.Text = Convert.ToString(Convert.ToInt32(lblScore.Text) + 1);
                 }
-                else if(lblColor.Tag == "YELLOW")
+                else if (lblColor.Tag == "YELLOW")
                 {
                     lstColors.Items.Remove("YELLOW");
                     lblScore.Text = Convert.ToString(Convert.ToInt32(lblScore.Text) + 1);
