@@ -195,5 +195,13 @@ namespace LibraryAutomation
                 dgvBooks.Rows.Add(targetBook.getBookID(), targetBook.getBookName(), targetBook.getWriter(), targetBook.getBookLanguage(), targetBook.getPublisher(), targetBook.getBookKind(), targetBook.getPiece(), targetBook.getNumberOfPages(), targetBook.getyearOfPublication());
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Login loginPage = new Login();
+            loginPage.Show();
+            this.Hide();
+            MessageBox.Show("Çıkış yapıldı.", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

@@ -55,13 +55,6 @@ namespace LibraryAutomation
             this.lblIdMember = new System.Windows.Forms.Label();
             this.lblMembers = new System.Windows.Forms.Label();
             this.dgvPersons = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Auth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBooks = new System.Windows.Forms.Label();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,6 +95,14 @@ namespace LibraryAutomation
             this.btnSearchBook = new System.Windows.Forms.Button();
             this.btnRefreshBook = new System.Windows.Forms.Button();
             this.txtSearchBookID = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Auth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBoxMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
@@ -352,56 +353,6 @@ namespace LibraryAutomation
             this.dgvPersons.Size = new System.Drawing.Size(664, 238);
             this.dgvPersons.TabIndex = 2;
             this.dgvPersons.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersons_CellClick);
-            // 
-            // id
-            // 
-            this.id.FillWeight = 10F;
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 50;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Ad";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.Width = 125;
-            // 
-            // Surname
-            // 
-            this.Surname.HeaderText = "Soyad";
-            this.Surname.MinimumWidth = 6;
-            this.Surname.Name = "Surname";
-            this.Surname.Width = 125;
-            // 
-            // CreationDate
-            // 
-            this.CreationDate.HeaderText = "Oluşturma Tarihi";
-            this.CreationDate.MinimumWidth = 6;
-            this.CreationDate.Name = "CreationDate";
-            this.CreationDate.Width = 90;
-            // 
-            // Username
-            // 
-            this.Username.HeaderText = "Kullanıcı Adı";
-            this.Username.MinimumWidth = 6;
-            this.Username.Name = "Username";
-            this.Username.Width = 125;
-            // 
-            // Password
-            // 
-            this.Password.HeaderText = "Şifre";
-            this.Password.MinimumWidth = 6;
-            this.Password.Name = "Password";
-            this.Password.Width = 87;
-            // 
-            // Auth
-            // 
-            this.Auth.HeaderText = "Yetki";
-            this.Auth.MinimumWidth = 6;
-            this.Auth.Name = "Auth";
-            this.Auth.Width = 85;
             // 
             // lblBooks
             // 
@@ -795,11 +746,69 @@ namespace LibraryAutomation
             this.txtSearchBookID.Size = new System.Drawing.Size(47, 32);
             this.txtSearchBookID.TabIndex = 5;
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(18, 741);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(107, 39);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "ÇIKIŞ";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // id
+            // 
+            this.id.FillWeight = 10F;
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Width = 50;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Ad";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            // 
+            // Surname
+            // 
+            this.Surname.HeaderText = "Soyad";
+            this.Surname.MinimumWidth = 6;
+            this.Surname.Name = "Surname";
+            // 
+            // CreationDate
+            // 
+            this.CreationDate.HeaderText = "Oluşturma Tarihi";
+            this.CreationDate.MinimumWidth = 6;
+            this.CreationDate.Name = "CreationDate";
+            this.CreationDate.Width = 90;
+            // 
+            // Username
+            // 
+            this.Username.HeaderText = "Kullanıcı Adı";
+            this.Username.MinimumWidth = 6;
+            this.Username.Name = "Username";
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Şifre";
+            this.Password.MinimumWidth = 6;
+            this.Password.Name = "Password";
+            this.Password.Width = 87;
+            // 
+            // Auth
+            // 
+            this.Auth.HeaderText = "Yetki";
+            this.Auth.MinimumWidth = 6;
+            this.Auth.Name = "Auth";
+            this.Auth.Width = 85;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1476, 752);
+            this.ClientSize = new System.Drawing.Size(1476, 782);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtSearchBookID);
             this.Controls.Add(this.txtSearchPersonID);
             this.Controls.Add(this.btnRefreshBook);
@@ -884,6 +893,13 @@ namespace LibraryAutomation
         private System.Windows.Forms.DataGridViewTextBoxColumn piece;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberOfPages;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearOfPublication;
+        private System.Windows.Forms.Button btnSearchPerson;
+        private System.Windows.Forms.TextBox txtSearchPersonID;
+        private System.Windows.Forms.Button btnRefreshPerson;
+        private System.Windows.Forms.Button btnSearchBook;
+        private System.Windows.Forms.Button btnRefreshBook;
+        private System.Windows.Forms.TextBox txtSearchBookID;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
@@ -891,11 +907,5 @@ namespace LibraryAutomation
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Auth;
-        private System.Windows.Forms.Button btnSearchPerson;
-        private System.Windows.Forms.TextBox txtSearchPersonID;
-        private System.Windows.Forms.Button btnRefreshPerson;
-        private System.Windows.Forms.Button btnSearchBook;
-        private System.Windows.Forms.Button btnRefreshBook;
-        private System.Windows.Forms.TextBox txtSearchBookID;
     }
 }

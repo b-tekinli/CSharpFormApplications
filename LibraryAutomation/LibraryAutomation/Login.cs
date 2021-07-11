@@ -50,7 +50,7 @@ namespace LibraryAutomation
                 }
                 else if (username.ToLower() == person.getUsername() && password.ToLower() == person.getPassword() && person.authority == "uye")
                 {
-                    Member member = new Member();
+                    Member member = new Member(books);
                     member.Show();
                     this.Hide();
                     control = true;
