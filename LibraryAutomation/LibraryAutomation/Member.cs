@@ -33,7 +33,7 @@ namespace LibraryAutomation
         {
             foreach (Book book in books)
             {
-                dgvBooksForMember.Rows.Add(book.getBookID(), book.getBookName(), book.getWriter(), book.getBookLanguage(), book.getPublisher(), book.getBookKind(), book.getPiece(), book.getNumberOfPages(), book.getyearOfPublication());
+                dgvBooks.Rows.Add(book.getBookID(), book.getBookName(), book.getWriter(), book.getBookLanguage(), book.getPublisher(), book.getBookKind(), book.getPiece(), book.getNumberOfPages(), book.getyearOfPublication());
             }
         }
 
@@ -50,10 +50,18 @@ namespace LibraryAutomation
                 }
             }
 
-            dgvBooksForMember.Rows.Clear();
-            dgvBooksForMember.Rows.Add(targetBook.getBookID(), targetBook.getBookName(), targetBook.getWriter(), targetBook.getBookLanguage(), targetBook.getPublisher(), targetBook.getBookKind(), targetBook.getPiece(), targetBook.getNumberOfPages(), targetBook.getyearOfPublication());
+            dgvBooks.Rows.Clear();
+            dgvBooks.Rows.Add(targetBook.getBookID(), targetBook.getBookName(), targetBook.getWriter(), targetBook.getBookLanguage(), targetBook.getPublisher(), targetBook.getBookKind(), targetBook.getPiece(), targetBook.getNumberOfPages(), targetBook.getyearOfPublication());
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            dgvBooks.Rows.Remove(dgvBooks.CurrentRow);
 
+            foreach (Book targetBook in books)
+            {
+                dgvBooks.Rows.Add(targetBook.getBookID(), targetBook.getBookName(), targetBook.getWriter(), targetBook.getBookLanguage(), targetBook.getPublisher(), targetBook.getBookKind(), targetBook.getPiece(), targetBook.getNumberOfPages(), targetBook.getyearOfPublication());
+            }
+        }
     }
 }

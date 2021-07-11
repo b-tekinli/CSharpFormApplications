@@ -33,7 +33,7 @@ namespace LibraryAutomation
             this.btnRefresh = new System.Windows.Forms.Button();
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.dgvBooksForMember = new System.Windows.Forms.DataGridView();
+            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.writer = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,7 @@ namespace LibraryAutomation
             this.piece = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberOfPages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearOfPublication = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksForMember)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -64,6 +64,7 @@ namespace LibraryAutomation
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Yenile";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // txtBookID
             // 
@@ -82,10 +83,10 @@ namespace LibraryAutomation
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // dgvBooksForMember
+            // dgvBooks
             // 
-            this.dgvBooksForMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBooksForMember.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookID,
             this.bookName,
             this.writer,
@@ -95,13 +96,13 @@ namespace LibraryAutomation
             this.piece,
             this.numberOfPages,
             this.yearOfPublication});
-            this.dgvBooksForMember.Location = new System.Drawing.Point(12, 69);
-            this.dgvBooksForMember.Name = "dgvBooksForMember";
-            this.dgvBooksForMember.RowHeadersWidth = 51;
-            this.dgvBooksForMember.RowTemplate.Height = 29;
-            this.dgvBooksForMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBooksForMember.Size = new System.Drawing.Size(776, 297);
-            this.dgvBooksForMember.TabIndex = 5;
+            this.dgvBooks.Location = new System.Drawing.Point(12, 69);
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.RowHeadersWidth = 51;
+            this.dgvBooks.RowTemplate.Height = 29;
+            this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBooks.Size = new System.Drawing.Size(776, 297);
+            this.dgvBooks.TabIndex = 5;
             // 
             // bookID
             // 
@@ -171,7 +172,7 @@ namespace LibraryAutomation
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 426);
-            this.Controls.Add(this.dgvBooksForMember);
+            this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtBookID);
             this.Controls.Add(this.btnRefresh);
@@ -179,7 +180,7 @@ namespace LibraryAutomation
             this.Name = "Member";
             this.Text = "Üye Sayfası";
             this.Load += new System.EventHandler(this.Member_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksForMember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +192,7 @@ namespace LibraryAutomation
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.TextBox txtBookID;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.DataGridView dgvBooksForMember;
+        private System.Windows.Forms.DataGridView dgvBooks;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
         private System.Windows.Forms.DataGridViewTextBoxColumn writer;
