@@ -29,25 +29,28 @@ namespace LibraryAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.grpBoxMembers = new System.Windows.Forms.GroupBox();
             this.mskTxtDate = new System.Windows.Forms.MaskedTextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdateMember = new System.Windows.Forms.Button();
+            this.ımageListIcons = new System.Windows.Forms.ImageList(this.components);
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
+            this.btnClearMember = new System.Windows.Forms.Button();
             this.txtAuth = new System.Windows.Forms.TextBox();
             this.lblAuth = new System.Windows.Forms.Label();
+            this.btnDeleteMember = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.btnAddMember = new System.Windows.Forms.Button();
             this.lblCreationDate = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.lblid = new System.Windows.Forms.Label();
+            this.txtNameMember = new System.Windows.Forms.TextBox();
+            this.lblNameMember = new System.Windows.Forms.Label();
+            this.txtIDMember = new System.Windows.Forms.TextBox();
+            this.lblIdMember = new System.Windows.Forms.Label();
             this.lblMembers = new System.Windows.Forms.Label();
             this.dgvPersons = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,24 +72,28 @@ namespace LibraryAutomation
             this.numberOfPages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearOfPublication = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBoxBooks = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnUpdateBook = new System.Windows.Forms.Button();
+            this.btnClearBook = new System.Windows.Forms.Button();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.txtBookKind = new System.Windows.Forms.TextBox();
+            this.lblBookKind = new System.Windows.Forms.Label();
+            this.txtNumberOfPages = new System.Windows.Forms.TextBox();
+            this.lblNumberOfPages = new System.Windows.Forms.Label();
+            this.txtPiece = new System.Windows.Forms.TextBox();
+            this.lblPiece = new System.Windows.Forms.Label();
+            this.txtLang = new System.Windows.Forms.TextBox();
+            this.txtYearOfPublication = new System.Windows.Forms.TextBox();
+            this.txtPublisher = new System.Windows.Forms.TextBox();
+            this.lblLang = new System.Windows.Forms.Label();
+            this.lblYearOfPublication = new System.Windows.Forms.Label();
+            this.lblPublisher = new System.Windows.Forms.Label();
+            this.txtWriter = new System.Windows.Forms.TextBox();
+            this.lblWriter = new System.Windows.Forms.Label();
+            this.txtNameBook = new System.Windows.Forms.TextBox();
+            this.lblNameBook = new System.Windows.Forms.Label();
+            this.txtIdBook = new System.Windows.Forms.TextBox();
+            this.lblIdBook = new System.Windows.Forms.Label();
             this.grpBoxMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
@@ -96,139 +103,161 @@ namespace LibraryAutomation
             // grpBoxMembers
             // 
             this.grpBoxMembers.Controls.Add(this.mskTxtDate);
-            this.grpBoxMembers.Controls.Add(this.btnUpdate);
-            this.grpBoxMembers.Controls.Add(this.btnClear);
-            this.grpBoxMembers.Controls.Add(this.btnDelete);
-            this.grpBoxMembers.Controls.Add(this.btnAdd);
+            this.grpBoxMembers.Controls.Add(this.btnUpdateMember);
             this.grpBoxMembers.Controls.Add(this.txtPass);
             this.grpBoxMembers.Controls.Add(this.lblPass);
+            this.grpBoxMembers.Controls.Add(this.btnClearMember);
             this.grpBoxMembers.Controls.Add(this.txtAuth);
             this.grpBoxMembers.Controls.Add(this.lblAuth);
+            this.grpBoxMembers.Controls.Add(this.btnDeleteMember);
             this.grpBoxMembers.Controls.Add(this.txtUsername);
             this.grpBoxMembers.Controls.Add(this.lblUsername);
+            this.grpBoxMembers.Controls.Add(this.btnAddMember);
             this.grpBoxMembers.Controls.Add(this.lblCreationDate);
             this.grpBoxMembers.Controls.Add(this.txtSurname);
             this.grpBoxMembers.Controls.Add(this.lblSurname);
-            this.grpBoxMembers.Controls.Add(this.txtName);
-            this.grpBoxMembers.Controls.Add(this.lblName);
-            this.grpBoxMembers.Controls.Add(this.txtID);
-            this.grpBoxMembers.Controls.Add(this.lblid);
-            this.grpBoxMembers.Location = new System.Drawing.Point(18, 337);
+            this.grpBoxMembers.Controls.Add(this.txtNameMember);
+            this.grpBoxMembers.Controls.Add(this.lblNameMember);
+            this.grpBoxMembers.Controls.Add(this.txtIDMember);
+            this.grpBoxMembers.Controls.Add(this.lblIdMember);
+            this.grpBoxMembers.Location = new System.Drawing.Point(18, 317);
             this.grpBoxMembers.Name = "grpBoxMembers";
-            this.grpBoxMembers.Size = new System.Drawing.Size(664, 377);
+            this.grpBoxMembers.Size = new System.Drawing.Size(664, 419);
             this.grpBoxMembers.TabIndex = 0;
             this.grpBoxMembers.TabStop = false;
             this.grpBoxMembers.Text = "Üye İşlemleri";
             // 
             // mskTxtDate
             // 
-            this.mskTxtDate.Location = new System.Drawing.Point(131, 194);
+            this.mskTxtDate.Location = new System.Drawing.Point(159, 203);
             this.mskTxtDate.Mask = "00/00/0000 90:00:00";
             this.mskTxtDate.Name = "mskTxtDate";
-            this.mskTxtDate.Size = new System.Drawing.Size(165, 27);
+            this.mskTxtDate.Size = new System.Drawing.Size(155, 27);
             this.mskTxtDate.TabIndex = 13;
             this.mskTxtDate.ValidatingType = typeof(System.DateTime);
             // 
-            // btnUpdate
+            // btnUpdateMember
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(356, 223);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(290, 59);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Güncelle";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdateMember.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateMember.ImageIndex = 3;
+            this.btnUpdateMember.ImageList = this.ımageListIcons;
+            this.btnUpdateMember.Location = new System.Drawing.Point(405, 261);
+            this.btnUpdateMember.Name = "btnUpdateMember";
+            this.btnUpdateMember.Size = new System.Drawing.Size(192, 59);
+            this.btnUpdateMember.TabIndex = 12;
+            this.btnUpdateMember.Text = "Güncelle";
+            this.btnUpdateMember.UseVisualStyleBackColor = true;
+            this.btnUpdateMember.Click += new System.EventHandler(this.btnUpdateMember_Click);
             // 
-            // btnClear
+            // ımageListIcons
             // 
-            this.btnClear.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClear.Location = new System.Drawing.Point(356, 310);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(290, 59);
-            this.btnClear.TabIndex = 12;
-            this.btnClear.Text = "Temizle";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(356, 132);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(290, 59);
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "Sil";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(356, 46);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(290, 59);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "Ekle";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.ımageListIcons.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ımageListIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageListIcons.ImageStream")));
+            this.ımageListIcons.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageListIcons.Images.SetKeyName(0, "add.ico");
+            this.ımageListIcons.Images.SetKeyName(1, "clear.ico");
+            this.ımageListIcons.Images.SetKeyName(2, "delete.ico");
+            this.ımageListIcons.Images.SetKeyName(3, "update.ico");
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(131, 293);
+            this.txtPass.Location = new System.Drawing.Point(488, 106);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(164, 27);
+            this.txtPass.Size = new System.Drawing.Size(149, 27);
             this.txtPass.TabIndex = 11;
             // 
             // lblPass
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPass.Location = new System.Drawing.Point(0, 298);
+            this.lblPass.Location = new System.Drawing.Point(347, 111);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(46, 18);
             this.lblPass.TabIndex = 10;
             this.lblPass.Text = "Şifre:";
             // 
+            // btnClearMember
+            // 
+            this.btnClearMember.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClearMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClearMember.ImageIndex = 1;
+            this.btnClearMember.ImageList = this.ımageListIcons;
+            this.btnClearMember.Location = new System.Drawing.Point(405, 348);
+            this.btnClearMember.Name = "btnClearMember";
+            this.btnClearMember.Size = new System.Drawing.Size(192, 59);
+            this.btnClearMember.TabIndex = 12;
+            this.btnClearMember.Text = "Temizle";
+            this.btnClearMember.UseVisualStyleBackColor = true;
+            this.btnClearMember.Click += new System.EventHandler(this.btnClearMember_Click);
+            // 
             // txtAuth
             // 
-            this.txtAuth.Location = new System.Drawing.Point(132, 340);
+            this.txtAuth.Location = new System.Drawing.Point(489, 153);
             this.txtAuth.Name = "txtAuth";
-            this.txtAuth.Size = new System.Drawing.Size(164, 27);
+            this.txtAuth.Size = new System.Drawing.Size(149, 27);
             this.txtAuth.TabIndex = 11;
             // 
             // lblAuth
             // 
             this.lblAuth.AutoSize = true;
             this.lblAuth.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAuth.Location = new System.Drawing.Point(0, 345);
+            this.lblAuth.Location = new System.Drawing.Point(347, 158);
             this.lblAuth.Name = "lblAuth";
             this.lblAuth.Size = new System.Drawing.Size(47, 18);
             this.lblAuth.TabIndex = 10;
             this.lblAuth.Text = "Yetki:";
             // 
+            // btnDeleteMember
+            // 
+            this.btnDeleteMember.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteMember.ImageIndex = 2;
+            this.btnDeleteMember.ImageList = this.ımageListIcons;
+            this.btnDeleteMember.Location = new System.Drawing.Point(82, 347);
+            this.btnDeleteMember.Name = "btnDeleteMember";
+            this.btnDeleteMember.Size = new System.Drawing.Size(192, 59);
+            this.btnDeleteMember.TabIndex = 12;
+            this.btnDeleteMember.Text = "Sil";
+            this.btnDeleteMember.UseVisualStyleBackColor = true;
+            this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
+            // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(132, 242);
+            this.txtUsername.Location = new System.Drawing.Point(489, 55);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(164, 27);
+            this.txtUsername.Size = new System.Drawing.Size(149, 27);
             this.txtUsername.TabIndex = 9;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsername.Location = new System.Drawing.Point(0, 247);
+            this.lblUsername.Location = new System.Drawing.Point(347, 60);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(98, 18);
             this.lblUsername.TabIndex = 8;
             this.lblUsername.Text = "Kullanıcı Adı:";
             // 
+            // btnAddMember
+            // 
+            this.btnAddMember.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMember.ImageIndex = 0;
+            this.btnAddMember.ImageList = this.ımageListIcons;
+            this.btnAddMember.Location = new System.Drawing.Point(82, 261);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(192, 59);
+            this.btnAddMember.TabIndex = 12;
+            this.btnAddMember.Text = "Ekle";
+            this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            // 
             // lblCreationDate
             // 
             this.lblCreationDate.AutoSize = true;
             this.lblCreationDate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCreationDate.Location = new System.Drawing.Point(0, 199);
+            this.lblCreationDate.Location = new System.Drawing.Point(24, 208);
             this.lblCreationDate.Name = "lblCreationDate";
             this.lblCreationDate.Size = new System.Drawing.Size(129, 18);
             this.lblCreationDate.TabIndex = 6;
@@ -236,54 +265,54 @@ namespace LibraryAutomation
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(132, 142);
+            this.txtSurname.Location = new System.Drawing.Point(160, 151);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(164, 27);
+            this.txtSurname.Size = new System.Drawing.Size(154, 27);
             this.txtSurname.TabIndex = 5;
             // 
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSurname.Location = new System.Drawing.Point(6, 145);
+            this.lblSurname.Location = new System.Drawing.Point(24, 154);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(55, 18);
             this.lblSurname.TabIndex = 4;
             this.lblSurname.Text = "Soyad:";
             // 
-            // txtName
+            // txtNameMember
             // 
-            this.txtName.Location = new System.Drawing.Point(132, 94);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(164, 27);
-            this.txtName.TabIndex = 3;
+            this.txtNameMember.Location = new System.Drawing.Point(160, 103);
+            this.txtNameMember.Name = "txtNameMember";
+            this.txtNameMember.Size = new System.Drawing.Size(154, 27);
+            this.txtNameMember.TabIndex = 3;
             // 
-            // lblName
+            // lblNameMember
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(6, 94);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(30, 18);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "Ad:";
+            this.lblNameMember.AutoSize = true;
+            this.lblNameMember.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNameMember.Location = new System.Drawing.Point(24, 103);
+            this.lblNameMember.Name = "lblNameMember";
+            this.lblNameMember.Size = new System.Drawing.Size(30, 18);
+            this.lblNameMember.TabIndex = 2;
+            this.lblNameMember.Text = "Ad:";
             // 
-            // txtID
+            // txtIDMember
             // 
-            this.txtID.Location = new System.Drawing.Point(132, 46);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(164, 27);
-            this.txtID.TabIndex = 1;
+            this.txtIDMember.Location = new System.Drawing.Point(160, 55);
+            this.txtIDMember.Name = "txtIDMember";
+            this.txtIDMember.Size = new System.Drawing.Size(154, 27);
+            this.txtIDMember.TabIndex = 1;
             // 
-            // lblid
+            // lblIdMember
             // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblid.Location = new System.Drawing.Point(6, 46);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(27, 18);
-            this.lblid.TabIndex = 0;
-            this.lblid.Text = "ID:";
+            this.lblIdMember.AutoSize = true;
+            this.lblIdMember.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblIdMember.Location = new System.Drawing.Point(24, 55);
+            this.lblIdMember.Name = "lblIdMember";
+            this.lblIdMember.Size = new System.Drawing.Size(27, 18);
+            this.lblIdMember.TabIndex = 0;
+            this.lblIdMember.Text = "ID:";
             // 
             // lblMembers
             // 
@@ -329,30 +358,35 @@ namespace LibraryAutomation
             this.name.HeaderText = "Ad";
             this.name.MinimumWidth = 6;
             this.name.Name = "name";
+            this.name.Width = 125;
             // 
             // Surname
             // 
             this.Surname.HeaderText = "Soyad";
             this.Surname.MinimumWidth = 6;
             this.Surname.Name = "Surname";
+            this.Surname.Width = 125;
             // 
             // CreationDate
             // 
             this.CreationDate.HeaderText = "Oluşturma Tarihi";
             this.CreationDate.MinimumWidth = 6;
             this.CreationDate.Name = "CreationDate";
+            this.CreationDate.Width = 90;
             // 
             // Username
             // 
             this.Username.HeaderText = "Kullanıcı Adı";
             this.Username.MinimumWidth = 6;
             this.Username.Name = "Username";
+            this.Username.Width = 125;
             // 
             // Password
             // 
             this.Password.HeaderText = "Şifre";
             this.Password.MinimumWidth = 6;
             this.Password.Name = "Password";
+            this.Password.Width = 87;
             // 
             // Auth
             // 
@@ -389,8 +423,10 @@ namespace LibraryAutomation
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.RowHeadersWidth = 51;
             this.dgvBooks.RowTemplate.Height = 29;
-            this.dgvBooks.Size = new System.Drawing.Size(746, 238);
+            this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBooks.Size = new System.Drawing.Size(764, 238);
             this.dgvBooks.TabIndex = 3;
+            this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             // 
             // bookID
             // 
@@ -404,12 +440,14 @@ namespace LibraryAutomation
             this.bookName.HeaderText = "Kitap Adı";
             this.bookName.MinimumWidth = 6;
             this.bookName.Name = "bookName";
+            this.bookName.Width = 110;
             // 
             // writer
             // 
             this.writer.HeaderText = "Yazar";
             this.writer.MinimumWidth = 6;
             this.writer.Name = "writer";
+            this.writer.Width = 110;
             // 
             // bookLang
             // 
@@ -420,7 +458,7 @@ namespace LibraryAutomation
             // 
             // publisher
             // 
-            this.publisher.HeaderText = "Yayın Adı";
+            this.publisher.HeaderText = "Yayınevi";
             this.publisher.MinimumWidth = 6;
             this.publisher.Name = "publisher";
             this.publisher.Width = 125;
@@ -448,208 +486,256 @@ namespace LibraryAutomation
             // 
             // yearOfPublication
             // 
-            this.yearOfPublication.HeaderText = "Yayın Yılı";
+            this.yearOfPublication.HeaderText = "Basım Yılı";
             this.yearOfPublication.MinimumWidth = 6;
             this.yearOfPublication.Name = "yearOfPublication";
             this.yearOfPublication.Width = 80;
             // 
             // grpBoxBooks
             // 
-            this.grpBoxBooks.Controls.Add(this.maskedTextBox1);
-            this.grpBoxBooks.Controls.Add(this.button1);
-            this.grpBoxBooks.Controls.Add(this.button2);
-            this.grpBoxBooks.Controls.Add(this.button3);
-            this.grpBoxBooks.Controls.Add(this.button4);
-            this.grpBoxBooks.Controls.Add(this.textBox1);
-            this.grpBoxBooks.Controls.Add(this.label1);
-            this.grpBoxBooks.Controls.Add(this.textBox2);
-            this.grpBoxBooks.Controls.Add(this.label2);
-            this.grpBoxBooks.Controls.Add(this.textBox3);
-            this.grpBoxBooks.Controls.Add(this.label3);
-            this.grpBoxBooks.Controls.Add(this.label4);
-            this.grpBoxBooks.Controls.Add(this.textBox4);
-            this.grpBoxBooks.Controls.Add(this.label5);
-            this.grpBoxBooks.Controls.Add(this.textBox5);
-            this.grpBoxBooks.Controls.Add(this.label6);
-            this.grpBoxBooks.Controls.Add(this.textBox6);
-            this.grpBoxBooks.Controls.Add(this.label7);
-            this.grpBoxBooks.Location = new System.Drawing.Point(708, 337);
+            this.grpBoxBooks.Controls.Add(this.btnUpdateBook);
+            this.grpBoxBooks.Controls.Add(this.btnClearBook);
+            this.grpBoxBooks.Controls.Add(this.btnDeleteBook);
+            this.grpBoxBooks.Controls.Add(this.btnAddBook);
+            this.grpBoxBooks.Controls.Add(this.txtBookKind);
+            this.grpBoxBooks.Controls.Add(this.lblBookKind);
+            this.grpBoxBooks.Controls.Add(this.txtNumberOfPages);
+            this.grpBoxBooks.Controls.Add(this.lblNumberOfPages);
+            this.grpBoxBooks.Controls.Add(this.txtPiece);
+            this.grpBoxBooks.Controls.Add(this.lblPiece);
+            this.grpBoxBooks.Controls.Add(this.txtLang);
+            this.grpBoxBooks.Controls.Add(this.txtYearOfPublication);
+            this.grpBoxBooks.Controls.Add(this.txtPublisher);
+            this.grpBoxBooks.Controls.Add(this.lblLang);
+            this.grpBoxBooks.Controls.Add(this.lblYearOfPublication);
+            this.grpBoxBooks.Controls.Add(this.lblPublisher);
+            this.grpBoxBooks.Controls.Add(this.txtWriter);
+            this.grpBoxBooks.Controls.Add(this.lblWriter);
+            this.grpBoxBooks.Controls.Add(this.txtNameBook);
+            this.grpBoxBooks.Controls.Add(this.lblNameBook);
+            this.grpBoxBooks.Controls.Add(this.txtIdBook);
+            this.grpBoxBooks.Controls.Add(this.lblIdBook);
+            this.grpBoxBooks.Location = new System.Drawing.Point(708, 317);
             this.grpBoxBooks.Name = "grpBoxBooks";
-            this.grpBoxBooks.Size = new System.Drawing.Size(746, 377);
+            this.grpBoxBooks.Size = new System.Drawing.Size(746, 419);
             this.grpBoxBooks.TabIndex = 0;
             this.grpBoxBooks.TabStop = false;
             this.grpBoxBooks.Text = "Kitap İşlemleri";
             // 
-            // maskedTextBox1
+            // btnUpdateBook
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(131, 194);
-            this.maskedTextBox1.Mask = "00/00/0000 90:00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(165, 27);
-            this.maskedTextBox1.TabIndex = 13;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.btnUpdateBook.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateBook.ImageIndex = 3;
+            this.btnUpdateBook.ImageList = this.ımageListIcons;
+            this.btnUpdateBook.Location = new System.Drawing.Point(429, 261);
+            this.btnUpdateBook.Name = "btnUpdateBook";
+            this.btnUpdateBook.Size = new System.Drawing.Size(192, 59);
+            this.btnUpdateBook.TabIndex = 13;
+            this.btnUpdateBook.Text = "Güncelle";
+            this.btnUpdateBook.UseVisualStyleBackColor = true;
+            this.btnUpdateBook.Click += new System.EventHandler(this.btnUpdateBook_Click);
             // 
-            // button1
+            // btnClearBook
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(356, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 59);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Güncelle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnClearBook.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClearBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClearBook.ImageIndex = 1;
+            this.btnClearBook.ImageList = this.ımageListIcons;
+            this.btnClearBook.Location = new System.Drawing.Point(429, 348);
+            this.btnClearBook.Name = "btnClearBook";
+            this.btnClearBook.Size = new System.Drawing.Size(192, 59);
+            this.btnClearBook.TabIndex = 14;
+            this.btnClearBook.Text = "Temizle";
+            this.btnClearBook.UseVisualStyleBackColor = true;
+            this.btnClearBook.Click += new System.EventHandler(this.btnClearBook_Click);
             // 
-            // button2
+            // btnDeleteBook
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(356, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(290, 59);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Temizle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnDeleteBook.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteBook.ImageIndex = 2;
+            this.btnDeleteBook.ImageList = this.ımageListIcons;
+            this.btnDeleteBook.Location = new System.Drawing.Point(106, 347);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(192, 59);
+            this.btnDeleteBook.TabIndex = 15;
+            this.btnDeleteBook.Text = "Sil";
+            this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
-            // button3
+            // btnAddBook
             // 
-            this.button3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(356, 132);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(290, 59);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnAddBook.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddBook.ImageIndex = 0;
+            this.btnAddBook.ImageList = this.ımageListIcons;
+            this.btnAddBook.Location = new System.Drawing.Point(106, 261);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(192, 59);
+            this.btnAddBook.TabIndex = 16;
+            this.btnAddBook.Text = "Ekle";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // button4
+            // txtBookKind
             // 
-            this.button4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(356, 46);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(290, 59);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Ekle";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.btnAdd_Click);
+            this.txtBookKind.Location = new System.Drawing.Point(508, 50);
+            this.txtBookKind.Name = "txtBookKind";
+            this.txtBookKind.Size = new System.Drawing.Size(164, 27);
+            this.txtBookKind.TabIndex = 11;
             // 
-            // textBox1
+            // lblBookKind
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 293);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 27);
-            this.textBox1.TabIndex = 11;
+            this.lblBookKind.AutoSize = true;
+            this.lblBookKind.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblBookKind.Location = new System.Drawing.Point(383, 55);
+            this.lblBookKind.Name = "lblBookKind";
+            this.lblBookKind.Size = new System.Drawing.Size(87, 18);
+            this.lblBookKind.TabIndex = 10;
+            this.lblBookKind.Text = "Kitap Türü:";
             // 
-            // label1
+            // txtNumberOfPages
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 298);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 18);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Şifre:";
+            this.txtNumberOfPages.Location = new System.Drawing.Point(509, 143);
+            this.txtNumberOfPages.Name = "txtNumberOfPages";
+            this.txtNumberOfPages.Size = new System.Drawing.Size(164, 27);
+            this.txtNumberOfPages.TabIndex = 11;
             // 
-            // textBox2
+            // lblNumberOfPages
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 340);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 27);
-            this.textBox2.TabIndex = 11;
+            this.lblNumberOfPages.AutoSize = true;
+            this.lblNumberOfPages.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNumberOfPages.Location = new System.Drawing.Point(383, 148);
+            this.lblNumberOfPages.Name = "lblNumberOfPages";
+            this.lblNumberOfPages.Size = new System.Drawing.Size(95, 18);
+            this.lblNumberOfPages.TabIndex = 10;
+            this.lblNumberOfPages.Text = "Sayfa Sayısı:";
             // 
-            // label2
+            // txtPiece
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 345);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Yetki:";
+            this.txtPiece.Location = new System.Drawing.Point(509, 97);
+            this.txtPiece.Name = "txtPiece";
+            this.txtPiece.Size = new System.Drawing.Size(164, 27);
+            this.txtPiece.TabIndex = 11;
             // 
-            // textBox3
+            // lblPiece
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 242);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 27);
-            this.textBox3.TabIndex = 9;
+            this.lblPiece.AutoSize = true;
+            this.lblPiece.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPiece.Location = new System.Drawing.Point(383, 102);
+            this.lblPiece.Name = "lblPiece";
+            this.lblPiece.Size = new System.Drawing.Size(44, 18);
+            this.lblPiece.TabIndex = 10;
+            this.lblPiece.Text = "Adet:";
             // 
-            // label3
+            // txtLang
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(0, 247);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Kullanıcı Adı:";
+            this.txtLang.Location = new System.Drawing.Point(186, 155);
+            this.txtLang.Name = "txtLang";
+            this.txtLang.Size = new System.Drawing.Size(164, 27);
+            this.txtLang.TabIndex = 9;
             // 
-            // label4
+            // txtYearOfPublication
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(0, 199);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Oluşturma Tarihi:";
+            this.txtYearOfPublication.Location = new System.Drawing.Point(509, 191);
+            this.txtYearOfPublication.Name = "txtYearOfPublication";
+            this.txtYearOfPublication.Size = new System.Drawing.Size(164, 27);
+            this.txtYearOfPublication.TabIndex = 9;
             // 
-            // textBox4
+            // txtPublisher
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 142);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(164, 27);
-            this.textBox4.TabIndex = 5;
+            this.txtPublisher.Location = new System.Drawing.Point(186, 191);
+            this.txtPublisher.Name = "txtPublisher";
+            this.txtPublisher.Size = new System.Drawing.Size(164, 27);
+            this.txtPublisher.TabIndex = 9;
             // 
-            // label5
+            // lblLang
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(6, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Soyad:";
+            this.lblLang.AutoSize = true;
+            this.lblLang.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLang.Location = new System.Drawing.Point(60, 160);
+            this.lblLang.Name = "lblLang";
+            this.lblLang.Size = new System.Drawing.Size(89, 18);
+            this.lblLang.TabIndex = 8;
+            this.lblLang.Text = "Kitabın Dili:";
             // 
-            // textBox5
+            // lblYearOfPublication
             // 
-            this.textBox5.Location = new System.Drawing.Point(132, 94);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(164, 27);
-            this.textBox5.TabIndex = 3;
+            this.lblYearOfPublication.AutoSize = true;
+            this.lblYearOfPublication.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblYearOfPublication.Location = new System.Drawing.Point(383, 196);
+            this.lblYearOfPublication.Name = "lblYearOfPublication";
+            this.lblYearOfPublication.Size = new System.Drawing.Size(81, 18);
+            this.lblYearOfPublication.TabIndex = 8;
+            this.lblYearOfPublication.Text = "Basım Yılı:";
             // 
-            // label6
+            // lblPublisher
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(6, 94);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 18);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Ad:";
+            this.lblPublisher.AutoSize = true;
+            this.lblPublisher.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPublisher.Location = new System.Drawing.Point(60, 196);
+            this.lblPublisher.Name = "lblPublisher";
+            this.lblPublisher.Size = new System.Drawing.Size(71, 18);
+            this.lblPublisher.TabIndex = 8;
+            this.lblPublisher.Text = "Yayınevi:";
             // 
-            // textBox6
+            // txtWriter
             // 
-            this.textBox6.Location = new System.Drawing.Point(132, 46);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(164, 27);
-            this.textBox6.TabIndex = 1;
+            this.txtWriter.Location = new System.Drawing.Point(186, 120);
+            this.txtWriter.Name = "txtWriter";
+            this.txtWriter.Size = new System.Drawing.Size(164, 27);
+            this.txtWriter.TabIndex = 5;
             // 
-            // label7
+            // lblWriter
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(6, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "ID:";
+            this.lblWriter.AutoSize = true;
+            this.lblWriter.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblWriter.Location = new System.Drawing.Point(60, 123);
+            this.lblWriter.Name = "lblWriter";
+            this.lblWriter.Size = new System.Drawing.Size(51, 18);
+            this.lblWriter.TabIndex = 4;
+            this.lblWriter.Text = "Yazar:";
+            // 
+            // txtNameBook
+            // 
+            this.txtNameBook.Location = new System.Drawing.Point(186, 87);
+            this.txtNameBook.Name = "txtNameBook";
+            this.txtNameBook.Size = new System.Drawing.Size(164, 27);
+            this.txtNameBook.TabIndex = 3;
+            // 
+            // lblNameBook
+            // 
+            this.lblNameBook.AutoSize = true;
+            this.lblNameBook.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNameBook.Location = new System.Drawing.Point(60, 87);
+            this.lblNameBook.Name = "lblNameBook";
+            this.lblNameBook.Size = new System.Drawing.Size(74, 18);
+            this.lblNameBook.TabIndex = 2;
+            this.lblNameBook.Text = "Kitap Adı:";
+            // 
+            // txtIdBook
+            // 
+            this.txtIdBook.Location = new System.Drawing.Point(186, 50);
+            this.txtIdBook.Name = "txtIdBook";
+            this.txtIdBook.Size = new System.Drawing.Size(164, 27);
+            this.txtIdBook.TabIndex = 1;
+            // 
+            // lblIdBook
+            // 
+            this.lblIdBook.AutoSize = true;
+            this.lblIdBook.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblIdBook.Location = new System.Drawing.Point(60, 50);
+            this.lblIdBook.Name = "lblIdBook";
+            this.lblIdBook.Size = new System.Drawing.Size(27, 18);
+            this.lblIdBook.TabIndex = 0;
+            this.lblIdBook.Text = "ID:";
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1461, 748);
+            this.ClientSize = new System.Drawing.Size(1476, 748);
             this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.dgvPersons);
             this.Controls.Add(this.lblBooks);
@@ -682,26 +768,43 @@ namespace LibraryAutomation
         private System.Windows.Forms.Label lblCreationDate;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label lblid;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtNameMember;
+        private System.Windows.Forms.Label lblNameMember;
+        private System.Windows.Forms.TextBox txtIDMember;
+        private System.Windows.Forms.Label lblIdMember;
+        private System.Windows.Forms.Button btnUpdateMember;
+        private System.Windows.Forms.Button btnClearMember;
+        private System.Windows.Forms.Button btnDeleteMember;
         private System.Windows.Forms.Label lblMembers;
         private System.Windows.Forms.DataGridView dgvPersons;
         private System.Windows.Forms.MaskedTextBox mskTxtDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CreationDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Auth;
         private System.Windows.Forms.Label lblBooks;
         private System.Windows.Forms.DataGridView dgvBooks;
+        private System.Windows.Forms.GroupBox grpBoxBooks;
+        private System.Windows.Forms.TextBox txtBookKind;
+        private System.Windows.Forms.Label lblBookKind;
+        private System.Windows.Forms.TextBox txtPiece;
+        private System.Windows.Forms.Label lblPiece;
+        private System.Windows.Forms.TextBox txtPublisher;
+        private System.Windows.Forms.Label lblPublisher;
+        private System.Windows.Forms.TextBox txtWriter;
+        private System.Windows.Forms.Label lblWriter;
+        private System.Windows.Forms.TextBox txtNameBook;
+        private System.Windows.Forms.Label lblNameBook;
+        private System.Windows.Forms.TextBox txtIdBook;
+        private System.Windows.Forms.Label lblIdBook;
+        private System.Windows.Forms.TextBox txtLang;
+        private System.Windows.Forms.Label lblLang;
+        private System.Windows.Forms.TextBox txtNumberOfPages;
+        private System.Windows.Forms.Label lblNumberOfPages;
+        private System.Windows.Forms.TextBox txtYearOfPublication;
+        private System.Windows.Forms.Label lblYearOfPublication;
+        private System.Windows.Forms.Button btnAddMember;
+        private System.Windows.Forms.Button btnUpdateBook;
+        private System.Windows.Forms.Button btnClearBook;
+        private System.Windows.Forms.Button btnDeleteBook;
+        private System.Windows.Forms.Button btnAddBook;
+        private System.Windows.Forms.ImageList ımageListIcons;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
         private System.Windows.Forms.DataGridViewTextBoxColumn writer;
@@ -711,24 +814,12 @@ namespace LibraryAutomation
         private System.Windows.Forms.DataGridViewTextBoxColumn piece;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberOfPages;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearOfPublication;
-        private System.Windows.Forms.GroupBox grpBoxBooks;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreationDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Auth;
     }
 }

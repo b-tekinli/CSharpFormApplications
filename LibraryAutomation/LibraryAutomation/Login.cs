@@ -67,9 +67,9 @@ namespace LibraryAutomation
         private void Login_Load(object sender, EventArgs e)
         {
             persons.Add(new Person(1, "Beyza", "Tekinli", DateTime.Now, "beyza", "1", "admin"));
-            persons.Add(new Person(2, "Yağmur", "Güzel", DateTime.Now, "yağmur", "2", "uye"));
+            persons.Add(new Person(2, "Yağmur", "Güzel", DateTime.Now, "yagmur", "2", "uye"));
             persons.Add(new Person(3, "Aleyna", "Öztürk", DateTime.Now, "aleyna", "3", "uye"));
-            persons.Add(new Person(4, "Bilal", "Türkk", DateTime.Now, "bilal", "4", "uye"));
+            persons.Add(new Person(4, "Bilal", "Türk", DateTime.Now, "bilal", "4", "uye"));
             persons.Add(new Person(5, "Şevval", "Tekinli", DateTime.Now, "sevval", "5", "uye"));
 
 
@@ -78,7 +78,6 @@ namespace LibraryAutomation
             books.Add(new Book(3, "Uçurtma Avcısı", "Khaled Hosseini", "İngilizce", "Everest Yayıncılık", "Roman", 100, 350, 2010));
             books.Add(new Book(4, "Küçük Prens", "Antoine de Saint-Exupery", "İngilizce", "Can Çocuk Yayınları", "Roman", 50, 60, 2018));
             books.Add(new Book(5, "Kürk Mantolu Madonna", "Sabahattin Ali", "Türkçe", "Yapı Kredi Yayınları", "Roman", 650, 220, 2015));
-            // books.Add(new Book(6, "Tehlikeli Oyunlar", "Oğuz Atay", "Türkçe", "İletişim Yayıncılık", "Roman", 420, 500, 2018));
         }
     }
 }
