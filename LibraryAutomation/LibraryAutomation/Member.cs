@@ -31,7 +31,29 @@ namespace LibraryAutomation
 
         private void Member_Load(object sender, EventArgs e)
         {
-
+            foreach (Book book in books)
+            {
+                dgvBooksForMember.Rows.Add(book.getBookID(), book.getBookName(), book.getWriter(), book.getBookLanguage(), book.getPublisher(), book.getBookKind(), book.getPiece(), book.getNumberOfPages(), book.getyearOfPublication());
+            }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int bookID = Convert.ToInt32(txtBookID.Text);
+            Book targetBook = null;
+
+            foreach (Book book in books)
+            {
+                if (book.getBookID() == bookID)
+                {
+                    targetBook = book;
+                }
+            }
+
+            dgvBooksForMember.Rows.Clear();
+            dgvBooksForMember.Rows.Add(targetBook.getBookID(), targetBook.getBookName(), targetBook.getWriter(), targetBook.getBookLanguage(), targetBook.getPublisher(), targetBook.getBookKind(), targetBook.getPiece(), targetBook.getNumberOfPages(), targetBook.getyearOfPublication());
+        }
+
+
     }
 }
