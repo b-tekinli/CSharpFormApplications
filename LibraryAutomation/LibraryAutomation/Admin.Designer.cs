@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace LibraryAutomation
 {
     partial class Admin
@@ -94,6 +96,12 @@ namespace LibraryAutomation
             this.lblNameBook = new System.Windows.Forms.Label();
             this.txtIdBook = new System.Windows.Forms.TextBox();
             this.lblIdBook = new System.Windows.Forms.Label();
+            this.btnSearchPerson = new System.Windows.Forms.Button();
+            this.txtSearchPersonID = new System.Windows.Forms.TextBox();
+            this.btnRefreshPerson = new System.Windows.Forms.Button();
+            this.btnSearchBook = new System.Windows.Forms.Button();
+            this.btnRefreshBook = new System.Windows.Forms.Button();
+            this.txtSearchBookID = new System.Windows.Forms.TextBox();
             this.grpBoxMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
@@ -731,11 +739,73 @@ namespace LibraryAutomation
             this.lblIdBook.TabIndex = 0;
             this.lblIdBook.Text = "ID:";
             // 
+            // btnSearchPerson
+            // 
+            this.btnSearchPerson.Location = new System.Drawing.Point(18, 12);
+            this.btnSearchPerson.Name = "btnSearchPerson";
+            this.btnSearchPerson.Size = new System.Drawing.Size(107, 33);
+            this.btnSearchPerson.TabIndex = 4;
+            this.btnSearchPerson.Text = "Kişi Ara";
+            this.btnSearchPerson.UseVisualStyleBackColor = true;
+            this.btnSearchPerson.Click += new System.EventHandler(this.btnSearchPerson_Click);
+            // 
+            // txtSearchPersonID
+            // 
+            this.txtSearchPersonID.Location = new System.Drawing.Point(131, 13);
+            this.txtSearchPersonID.Multiline = true;
+            this.txtSearchPersonID.Name = "txtSearchPersonID";
+            this.txtSearchPersonID.Size = new System.Drawing.Size(48, 32);
+            this.txtSearchPersonID.TabIndex = 5;
+            // 
+            // btnRefreshPerson
+            // 
+            this.btnRefreshPerson.Location = new System.Drawing.Point(185, 13);
+            this.btnRefreshPerson.Name = "btnRefreshPerson";
+            this.btnRefreshPerson.Size = new System.Drawing.Size(107, 33);
+            this.btnRefreshPerson.TabIndex = 4;
+            this.btnRefreshPerson.Text = "Yenile";
+            this.btnRefreshPerson.UseVisualStyleBackColor = true;
+            this.btnRefreshPerson.Click += new System.EventHandler(this.btnRefreshPerson_Click);
+            // 
+            // btnSearchBook
+            // 
+            this.btnSearchBook.Location = new System.Drawing.Point(708, 13);
+            this.btnSearchBook.Name = "btnSearchBook";
+            this.btnSearchBook.Size = new System.Drawing.Size(107, 33);
+            this.btnSearchBook.TabIndex = 4;
+            this.btnSearchBook.Text = "Kitap Ara";
+            this.btnSearchBook.UseVisualStyleBackColor = true;
+            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
+            // 
+            // btnRefreshBook
+            // 
+            this.btnRefreshBook.Location = new System.Drawing.Point(875, 14);
+            this.btnRefreshBook.Name = "btnRefreshBook";
+            this.btnRefreshBook.Size = new System.Drawing.Size(107, 33);
+            this.btnRefreshBook.TabIndex = 4;
+            this.btnRefreshBook.Text = "Yenile";
+            this.btnRefreshBook.UseVisualStyleBackColor = true;
+            this.btnRefreshBook.Click += new System.EventHandler(this.btnRefreshBook_Click);
+            // 
+            // txtSearchBookID
+            // 
+            this.txtSearchBookID.Location = new System.Drawing.Point(822, 14);
+            this.txtSearchBookID.Multiline = true;
+            this.txtSearchBookID.Name = "txtSearchBookID";
+            this.txtSearchBookID.Size = new System.Drawing.Size(47, 32);
+            this.txtSearchBookID.TabIndex = 5;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1476, 748);
+            this.ClientSize = new System.Drawing.Size(1476, 752);
+            this.Controls.Add(this.txtSearchBookID);
+            this.Controls.Add(this.txtSearchPersonID);
+            this.Controls.Add(this.btnRefreshBook);
+            this.Controls.Add(this.btnRefreshPerson);
+            this.Controls.Add(this.btnSearchBook);
+            this.Controls.Add(this.btnSearchPerson);
             this.Controls.Add(this.dgvBooks);
             this.Controls.Add(this.dgvPersons);
             this.Controls.Add(this.lblBooks);
@@ -821,5 +891,11 @@ namespace LibraryAutomation
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Auth;
+        private System.Windows.Forms.Button btnSearchPerson;
+        private System.Windows.Forms.TextBox txtSearchPersonID;
+        private System.Windows.Forms.Button btnRefreshPerson;
+        private System.Windows.Forms.Button btnSearchBook;
+        private System.Windows.Forms.Button btnRefreshBook;
+        private System.Windows.Forms.TextBox txtSearchBookID;
     }
 }

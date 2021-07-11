@@ -137,5 +137,63 @@ namespace LibraryAutomation
             txtNumberOfPages.Text = dgvBooks.CurrentRow.Cells[7].Value.ToString();
             txtYearOfPublication.Text = dgvBooks.CurrentRow.Cells[8].Value.ToString();
         }
+
+        private void btnSearchPerson_Click(object sender, EventArgs e)
+        {
+            Person targetPerson = null;
+
+            int choosePersonID = Convert.ToInt32(txtSearchPersonID.Text);
+
+            foreach (Person person in persons)
+            {
+                if (person.getID() == choosePersonID)
+                {
+                    targetPerson = person;
+                    break;
+                }
+            }
+
+            dgvPersons.Rows.Clear();
+            dgvPersons.Rows.Add(targetPerson.getID(), targetPerson.getName(), targetPerson.getSurname(), targetPerson.getCreationDate(), targetPerson.getUsername(), targetPerson.getPassword(), targetPerson.getAuthority());
+        }
+
+        private void btnRefreshPerson_Click(object sender, EventArgs e)
+        {
+            dgvPersons.Rows.Remove(dgvPersons.CurrentRow);
+
+            foreach (Person targetPerson in persons)
+            {
+                dgvPersons.Rows.Add(targetPerson.getID(), targetPerson.getName(), targetPerson.getSurname(), targetPerson.getCreationDate(), targetPerson.getUsername(), targetPerson.getPassword(), targetPerson.getAuthority());
+            }
+        }
+
+        private void btnSearchBook_Click(object sender, EventArgs e)
+        {
+            Book targetBook = null;
+
+            int chooseBookID = Convert.ToInt32(txtSearchBookID.Text);
+
+            foreach (Book book in books)
+            {
+                if (book.getBookID() == chooseBookID)
+                {
+                    targetBook = book;
+                    break;
+                }
+            }
+
+            dgvBooks.Rows.Clear();
+            dgvBooks.Rows.Add(targetBook.getBookID(), targetBook.getBookName(), targetBook.getWriter(), targetBook.getBookLanguage(), targetBook.getPublisher(), targetBook.getBookKind(), targetBook.getPiece(), targetBook.getNumberOfPages(), targetBook.getyearOfPublication());
+        }
+
+        private void btnRefreshBook_Click(object sender, EventArgs e)
+        {
+            dgvBooks.Rows.Remove(dgvBooks.CurrentRow);
+
+            foreach (Book targetBook in books)
+            {
+                dgvBooks.Rows.Add(targetBook.getBookID(), targetBook.getBookName(), targetBook.getWriter(), targetBook.getBookLanguage(), targetBook.getPublisher(), targetBook.getBookKind(), targetBook.getPiece(), targetBook.getNumberOfPages(), targetBook.getyearOfPublication());
+            }
+        }
     }
 }
