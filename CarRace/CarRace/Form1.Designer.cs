@@ -32,21 +32,21 @@ namespace CarRace
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pcbRoad = new System.Windows.Forms.PictureBox();
-            this.pcbCar1 = new System.Windows.Forms.PictureBox();
-            this.pcbCar3 = new System.Windows.Forms.PictureBox();
+            this.pcbBoom = new System.Windows.Forms.PictureBox();
             this.pcbCar2 = new System.Windows.Forms.PictureBox();
+            this.pcbMyCar = new System.Windows.Forms.PictureBox();
+            this.pcbCar1 = new System.Windows.Forms.PictureBox();
+            this.pcbRoad = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
-            this.pcbBoom = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbRoad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMyCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbRoad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,53 +54,63 @@ namespace CarRace
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pcbBoom);
             this.panel1.Controls.Add(this.pcbCar2);
-            this.panel1.Controls.Add(this.pcbCar3);
+            this.panel1.Controls.Add(this.pcbMyCar);
             this.panel1.Controls.Add(this.pcbCar1);
             this.panel1.Controls.Add(this.pcbRoad);
             this.panel1.Location = new System.Drawing.Point(21, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 523);
+            this.panel1.Size = new System.Drawing.Size(507, 523);
             this.panel1.TabIndex = 0;
             // 
-            // pcbRoad
+            // pcbBoom
             // 
-            this.pcbRoad.Image = ((System.Drawing.Image)(resources.GetObject("pcbRoad.Image")));
-            this.pcbRoad.Location = new System.Drawing.Point(0, -3);
-            this.pcbRoad.Name = "pcbRoad";
-            this.pcbRoad.Size = new System.Drawing.Size(475, 523);
-            this.pcbRoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbRoad.TabIndex = 0;
-            this.pcbRoad.TabStop = false;
-            // 
-            // pcbCar1
-            // 
-            this.pcbCar1.Image = ((System.Drawing.Image)(resources.GetObject("pcbCar1.Image")));
-            this.pcbCar1.Location = new System.Drawing.Point(70, 161);
-            this.pcbCar1.Name = "pcbCar1";
-            this.pcbCar1.Size = new System.Drawing.Size(65, 134);
-            this.pcbCar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbCar1.TabIndex = 1;
-            this.pcbCar1.TabStop = false;
-            // 
-            // pcbCar3
-            // 
-            this.pcbCar3.Image = ((System.Drawing.Image)(resources.GetObject("pcbCar3.Image")));
-            this.pcbCar3.Location = new System.Drawing.Point(216, 383);
-            this.pcbCar3.Name = "pcbCar3";
-            this.pcbCar3.Size = new System.Drawing.Size(75, 124);
-            this.pcbCar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbCar3.TabIndex = 1;
-            this.pcbCar3.TabStop = false;
+            this.pcbBoom.Image = ((System.Drawing.Image)(resources.GetObject("pcbBoom.Image")));
+            this.pcbBoom.Location = new System.Drawing.Point(275, 261);
+            this.pcbBoom.Name = "pcbBoom";
+            this.pcbBoom.Size = new System.Drawing.Size(53, 53);
+            this.pcbBoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbBoom.TabIndex = 2;
+            this.pcbBoom.TabStop = false;
             // 
             // pcbCar2
             // 
             this.pcbCar2.Image = ((System.Drawing.Image)(resources.GetObject("pcbCar2.Image")));
-            this.pcbCar2.Location = new System.Drawing.Point(371, 38);
+            this.pcbCar2.Location = new System.Drawing.Point(405, 38);
             this.pcbCar2.Name = "pcbCar2";
-            this.pcbCar2.Size = new System.Drawing.Size(60, 123);
+            this.pcbCar2.Size = new System.Drawing.Size(69, 134);
             this.pcbCar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbCar2.TabIndex = 1;
             this.pcbCar2.TabStop = false;
+            // 
+            // pcbMyCar
+            // 
+            this.pcbMyCar.Image = ((System.Drawing.Image)(resources.GetObject("pcbMyCar.Image")));
+            this.pcbMyCar.Location = new System.Drawing.Point(210, 306);
+            this.pcbMyCar.Name = "pcbMyCar";
+            this.pcbMyCar.Size = new System.Drawing.Size(69, 134);
+            this.pcbMyCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbMyCar.TabIndex = 1;
+            this.pcbMyCar.TabStop = false;
+            // 
+            // pcbCar1
+            // 
+            this.pcbCar1.Image = ((System.Drawing.Image)(resources.GetObject("pcbCar1.Image")));
+            this.pcbCar1.Location = new System.Drawing.Point(54, 38);
+            this.pcbCar1.Name = "pcbCar1";
+            this.pcbCar1.Size = new System.Drawing.Size(69, 134);
+            this.pcbCar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbCar1.TabIndex = 1;
+            this.pcbCar1.TabStop = false;
+            // 
+            // pcbRoad
+            // 
+            this.pcbRoad.Image = ((System.Drawing.Image)(resources.GetObject("pcbRoad.Image")));
+            this.pcbRoad.Location = new System.Drawing.Point(0, 0);
+            this.pcbRoad.Name = "pcbRoad";
+            this.pcbRoad.Size = new System.Drawing.Size(513, 775);
+            this.pcbRoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbRoad.TabIndex = 0;
+            this.pcbRoad.TabStop = false;
             // 
             // label1
             // 
@@ -135,21 +145,15 @@ namespace CarRace
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // pcbBoom
+            // timer1
             // 
-            this.pcbBoom.Image = ((System.Drawing.Image)(resources.GetObject("pcbBoom.Image")));
-            this.pcbBoom.Location = new System.Drawing.Point(283, 344);
-            this.pcbBoom.Name = "pcbBoom";
-            this.pcbBoom.Size = new System.Drawing.Size(62, 54);
-            this.pcbBoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbBoom.TabIndex = 2;
-            this.pcbBoom.TabStop = false;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 677);
+            this.ClientSize = new System.Drawing.Size(540, 677);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
@@ -158,11 +162,11 @@ namespace CarRace
             this.Text = "Araba Yarışı";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbRoad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMyCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbRoad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,7 +177,7 @@ namespace CarRace
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pcbRoad;
         private System.Windows.Forms.PictureBox pcbCar2;
-        private System.Windows.Forms.PictureBox pcbCar3;
+        private System.Windows.Forms.PictureBox pcbMyCar;
         private System.Windows.Forms.PictureBox pcbCar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblScore;
