@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace CarRace
 {
@@ -34,6 +35,8 @@ namespace CarRace
             btnStart.Enabled = false;
             pcbBoom.Visible = false;
 
+            lblHighScore.Text = Settings1.Default.highScore.ToString();
+
             carSpeed = 5;
             otherCarSpeed = 5;
             points = 0;
@@ -48,11 +51,15 @@ namespace CarRace
             pcbCar1.Top = 50;
 
             pcbCar2.Left = 320;
-            pcbCar2.Top = 50;
+            pcbCar2.Top = 300;
 
 
             leftDirection = false;
             rightDirection = false;
+
+
+            pcbBoom.Left = 165;
+            pcbBoom.Top = 294;
 
             timer1.Start();
         }
@@ -60,12 +67,21 @@ namespace CarRace
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-
+            startGame();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             startGame();
+            turnUpSound();
+        }
+
+        private void turnUpSound()
+        {
+            SoundPlayer sound = new SoundPlayer();
+            string noSound = Application.StartupPath + "\\lostsky.wav";
+            sound.SoundLocation = noSound;
+            sound.Play();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -157,7 +173,6 @@ namespace CarRace
             }
         }
 
-
         private void changeCar2()
         {
             int queue = random.Next(1, 7);
@@ -193,11 +208,44 @@ namespace CarRace
         private void finishGame()
         {
             timer1.Stop();
+
+            if (Convert.ToInt32(lblScore.Text) > Convert.ToInt32(Settings1.Default.highScore.ToString()))
+            {
+                Settings1.Default.highScore = lblScore.Text;
+            }
+
             btnStart.Enabled = true;
             pcbBoom.Visible = true;
+            pcbMyCar.Controls.Add(pcbBoom);
+            pcbBoom.Location = new Point(7, -5);
             pcbBoom.BringToFront();
             pcbBoom.BackColor = Color.Transparent;
             MessageBox.Show("Tebrikler! Skorunuz: " + lblScore.Text, "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left && pcbMyCar.Left > 0)
+            {
+                leftDirection = true;
+            }
+
+            if (e.KeyCode == Keys.Right && pcbMyCar.Left + pcbMyCar.Width < panel1.Width)
+            {
+                rightDirection = true;
+            }
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                leftDirection = false;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                rightDirection = false;
+            }
         }
     }
 }
